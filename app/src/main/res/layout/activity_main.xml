@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="90dp"
-        android:fontFamily="@font/roboto_light"
+        android:fontFamily="@font/computer_says_no"
         android:text="Emicode"
         android:textColor="@color/white"
-        android:textSize="50sp" />
+        android:textSize="100sp" />
 
     <EditText
         android:id="@+id/editTextCompanyEmail"
@@ -31,6 +31,7 @@
         android:background="@drawable/shape"
         android:padding="3dp"
         android:hint=" Company Email"
+        android:fontFamily="@font/roboto_light"
         android:textSize="25sp" />
 
     <EditText
@@ -46,22 +47,24 @@
         android:password="true"
         android:padding="3dp"
         android:hint=" Password"
+        android:fontFamily="@font/roboto_light"
         android:textSize="25sp" />
 
 
-    <!--Di ko maayos ung button huhuh di ko alam bat ayaw niya magmatch tas purple pa background
-    tas ung color nakaset naman sa white pero black pa din wala na niiyak nako-->
+    <!--Ung color na lang ng button problema ko medyo naiiyaq parin ako-->
     <Button
         android:id="@+id/buttonLogIn"
-        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextCompanyPassword"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/roundstyleborder"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="@font/roboto_light"
-        android:hint="Log In"
-        android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:padding="8dp"
+        android:text="Log In"
+        android:textSize="25sp" />
 
 
 </RelativeLayout>
