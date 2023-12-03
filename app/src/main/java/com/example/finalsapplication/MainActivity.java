@@ -2,6 +2,7 @@ package com.example.finalsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.util.TimeFormatException;
@@ -88,7 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void logIn() {
         Toast.makeText(this, "Log In Successful", Toast.LENGTH_SHORT).show();
-        // You can add your further login logic here
+        //  add login logic here
+
+        //Palitan na lang hehe for testing purposes only
+        Intent intent = new Intent(this, ViewLesson1.class);
+
+        startActivity(intent);
 
     }
 }
