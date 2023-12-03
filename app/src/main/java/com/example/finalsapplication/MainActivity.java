@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.util.TimeFormatException;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private String allowedEmail = "emilysotelo@emicode.com";
-    private static final String ALLOWED_PASSWORD = "emilysakalam";
+    private static final String ALLOWED_PASSWORD = "12345";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +25,24 @@ public class MainActivity extends AppCompatActivity {
         final EditText editTextCompanyPassword = findViewById(R.id.editTextCompanyPassword);
         final EditText editTextCompanyEmail = findViewById(R.id.editTextCompanyEmail);
 
+        // moves to the next field when enter key is pressed
+        editTextCompanyEmail.setOnEditorActionListener((textView, actionId, keyEvent) -> {
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                editTextCompanyPassword.requestFocus(); // Move focus to the password field
+                return true;
+            }
+            return false;
+        });
+
+        // moves to the next activity when enter key is pressed
+        editTextCompanyPassword.setOnEditorActionListener((textView, actionId, keyEvent) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                buttonLogIn.performClick();
+                return true;
+            }
+            return false;
+        });
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 if (validateFields(editTextCompanyEmail, editTextCompanyPassword)) {
                     if (validateEmail(editTextCompanyEmail) && validatePassword(editTextCompanyPassword)) {
@@ -36,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     //This method validates the email inputted by the user
     //

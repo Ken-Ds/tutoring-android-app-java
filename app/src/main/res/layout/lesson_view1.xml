@@ -59,7 +59,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="25dp"
-                    android:src="@drawable/arrowleft" />
+                    android:src="@drawable/arrowleft"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/imageButtonNext"
@@ -67,7 +69,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="210dp"
                     android:layout_marginTop="25dp"
-                    android:src="@drawable/arrowright" />
+                    android:src="@drawable/arrowright"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
         </LinearLayout>
