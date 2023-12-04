@@ -28,6 +28,12 @@
             android:name=".ViewLesson1"
             android:exported="false" />
         <activity
+            android:name=".TestPage"
+            android:exported="false" />
+        <activity
+            android:name=".LessonsPage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
