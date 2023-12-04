@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ourBlue"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/TakeTestLesson2"
+            android:layout_width="132dp"
+            android:layout_height="51dp"
+            android:backgroundTint="@color/bottomNav"
+            android:text="Take Test"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="565dp" />
+
+        <Button
+            android:id="@+id/L1T1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Topic 1"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@drawable/custom_button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="156dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="LESSON 1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints,RtlHardcoded"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="96dp" />
+
+        <Button
+            android:id="@+id/L1T3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Topic 3"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@drawable/custom_button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="252dp" />
+
+        <Button
+            android:id="@+id/L2T1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Topic 1"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@drawable/custom_button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="421dp" />
+
+        <Button
+            android:id="@+id/L2T2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Topic 2"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@drawable/custom_button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="469dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="LESSON 2"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="361dp" />
+
+        <Button
+            android:id="@+id/L2T3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Topic 3"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@drawable/custom_button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="517dp" />
+
+        <Button
+            android:id="@+id/L1T2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Topic 2"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@drawable/custom_button"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="204dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="361dp"
+            android:layout_height="84dp"
+            android:background="@drawable/bottom_navigation"
+            android:elevation="2dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="629dp">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/baseline_arrow_back_24"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:backgroundTint="@drawable/baseline_arrow_back_24"
+
+                />
+
+            <Button
+                android:id="@+id/backButton2"
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/baseline_arrow_back_24"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:backgroundTint="@drawable/baseline_arrow_back_24" />
+
+            <Button
+                android:id="@+id/forwardButton"
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="265dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/baseline_arrow_forward_24"
+                android:text="Forward"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:backgroundTint="@drawable/baseline_arrow_back_24" />
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="238dp"
+            android:layout_height="53dp"
+            android:text="TEST"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="28dp" />
+
+        <Button
+            android:id="@+id/TakeTestLesson1"
+            android:layout_width="132dp"
+            android:layout_height="51dp"
+            android:backgroundTint="@color/bottomNav"
+            android:text="Take Test"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="300dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
