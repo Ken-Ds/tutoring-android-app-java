@@ -29,7 +29,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto_black"
-                    android:hint="Lesson 1"
+                    android:text="Lesson 1"
                     android:textColor="@color/white"
                     android:textSize="50sp" />
             </LinearLayout>
@@ -54,24 +54,26 @@
                 android:background="#a8b4d8">
 
                 <ImageButton
-                    android:id="@+id/imageButtonBack"
+                    android:id="@+id/imageButtonBackVL1"
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:src="@drawable/arrowleft"
                     android:scaleType="fitCenter"
-                    android:background="@android:color/transparent"/>
+                    android:layout_marginBottom="20dp"
+                    android:background="?android:attr/selectableItemBackground"/>
 
                 <ImageButton
-                    android:id="@+id/imageButtonNext"
+                    android:id="@+id/imageButtonNextVL1"
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="210dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:src="@drawable/arrowright"
                     android:scaleType="fitCenter"
-                    android:background="@android:color/transparent"/>
+                    android:layout_marginBottom="20dp"
+                    android:background="?android:attr/selectableItemBackground"/>
             </LinearLayout>
 
         </LinearLayout>

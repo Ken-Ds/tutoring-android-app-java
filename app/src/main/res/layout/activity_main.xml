@@ -52,8 +52,6 @@
         android:fontFamily="@font/roboto_light"
         android:textSize="25sp" />
 
-
-    <!--Ung color na lang ng button problema ko medyo naiiyaq parin ako-->
     <Button
         android:id="@+id/buttonLogIn"
         android:background="@drawable/rounded_button"
@@ -66,7 +64,8 @@
         android:fontFamily="@font/roboto_light"
         android:padding="8dp"
         android:text="Log In"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        app:backgroundTint="#1e5180"/>
 
 
 </RelativeLayout>
