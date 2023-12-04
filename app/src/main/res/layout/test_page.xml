@@ -249,7 +249,7 @@
                 android:background="#a8b4d8">
 
                 <ImageButton
-                    android:id="@+id/imageButtonBackVL1"
+                    android:id="@+id/imageButtonBackTP1"
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -260,7 +260,7 @@
                     android:src="@drawable/arrowleft" />
 
                 <ImageButton
-                    android:id="@+id/imageButtonNextVL1"
+                    android:id="@+id/imageButtonNextTP1"
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="210dp"
