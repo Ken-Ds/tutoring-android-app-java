@@ -19,7 +19,7 @@
                 android:id="@+id/textViewAddUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add User"
+                android:text="ADD USER"
                 android:fontFamily="@font/roboto_bold"
                 android:textSize="40sp"
                 android:layout_marginStart="20dp"
@@ -164,7 +164,7 @@
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="10dp"/>
 
             <EditText
                 android:id="@+id/editTextDateHiredAU"

@@ -30,8 +30,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="Lesson 1
-                    Test"
+                    android:text="LESSON 1
+                    TEST"
                     android:textColor="@color/white"
                     android:textSize="40sp" />
 

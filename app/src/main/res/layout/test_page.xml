@@ -3,15 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/ourBlue">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="114dp"
-        android:layout_alignParentTop="true"
-        android:background="#1e5180">
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="409dp"
@@ -47,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="-10dp"
                 android:fontFamily="@font/roboto_black"
                 android:text="Lesson 1"
                 android:textColor="@color/white"
@@ -55,48 +49,54 @@
 
             <Button
                 android:id="@+id/L1T1"
-                android:layout_width="291dp"
+                android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Topic 1"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/L1T2"
-                android:layout_width="291dp"
+                android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:backgroundTint="#E9E9E9"
+                android:layout_marginTop="4dp"
+                app:backgroundTint="#E9E9E9"
                 android:text="Topic 2"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:background="@drawable/square_button_colored_border" />
 
             <Button
                 android:id="@+id/L1T3"
-                android:layout_width="293dp"
+                android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
                 android:text="Topic 3"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/takeTestLesson1"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:text="Take Test"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="4dp"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:backgroundTint="#a8b4d8"/>
 
             <LinearLayout
@@ -119,45 +119,51 @@
 
             <Button
                 android:id="@+id/L2T1"
-                android:layout_width="295dp"
+                android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Topic 1"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/L2T2"
                 android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
                 android:text="Topic 2"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/L2T3"
                 android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
                 android:text="Topic 3"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/takeTestLesson2"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="4dp"
                 android:backgroundTint="#a8b4d8"
                 android:text="Take Test"
                 android:textColor="@color/black"
@@ -190,49 +196,50 @@
                 android:text="Topic 1"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/L3T2"
-                android:layout_width="299dp"
+                android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
                 android:text="Topic 2"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/L3T3"
                 android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
                 android:text="Topic 3"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
-                android:backgroundTint="#E9E9E9"/>
+                android:background="@drawable/square_button_colored_border"
+                app:backgroundTint="#E9E9E9"/>
 
             <Button
                 android:id="@+id/takeTestLesson3"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp"
                 android:backgroundTint="#a8b4d8"
                 android:text="Take Test"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:text="TextView" />
 
             <Button
                 android:id="@+id/summativeButton"
@@ -244,28 +251,9 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginBottom="20dp"
                 />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:background="#1e5180"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="39dp"
-                android:layout_alignParentTop="true"
-                android:background="#1e5180">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:background="#1e5180"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -283,19 +271,7 @@
                     android:background="?android:attr/selectableItemBackground"
                     android:scaleType="fitCenter"
                     android:src="@drawable/arrowleft" />
-
-                <ImageButton
-                    android:id="@+id/imageButtonNextTP1"
-                    android:layout_width="76dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="210dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/arrowright" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
