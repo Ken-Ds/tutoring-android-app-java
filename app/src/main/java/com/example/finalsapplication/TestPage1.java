@@ -3,7 +3,7 @@ package com.example.finalsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TestPage extends AppCompatActivity {
+public class TestPage1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
