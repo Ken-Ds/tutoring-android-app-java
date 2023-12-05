@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "FinalsApplication"
 include(":app")
+include(":emicodeadmin")
