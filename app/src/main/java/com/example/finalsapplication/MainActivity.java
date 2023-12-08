@@ -113,6 +113,5 @@ public class MainActivity extends AppCompatActivity {
         Intent logInButton = new Intent(this, UserMenu.class);
         startActivity(logInButton);
 
-
     }
 }
