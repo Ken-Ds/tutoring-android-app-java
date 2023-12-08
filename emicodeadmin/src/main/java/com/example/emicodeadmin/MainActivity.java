@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         //  add login logic here
 
         //Palitan na lang hehe for testing purposes only
-        Intent logInButton = new Intent(this, EditProfile.class);
+        Intent logInButton = new Intent(this, AdminMenu.class);
         startActivity(logInButton);
 
 

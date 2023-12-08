@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         //  add login logic here
 
         //Palitan na lang hehe for testing purposes only
-        Intent logInButton = new Intent(this, ViewLesson1.class);
+        Intent logInButton = new Intent(this, UserMenu.class);
         startActivity(logInButton);
 
 
