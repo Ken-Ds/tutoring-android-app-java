@@ -28,19 +28,10 @@
             android:name=".TestPage1"
             android:exported="false" />
         <activity
-            android:name="com.example.emicodeadmin.EditProfile"
-            android:exported="false" />
-        <activity
-            android:name="com.example.emicodeadmin.EditTest"
-            android:exported="false" />
-        <activity
             android:name=".ViewTest1"
             android:exported="false" />
         <activity
             android:name=".ViewLesson1"
-            android:exported="false" />
-        <activity
-            android:name=".TestPage1"
             android:exported="false" />
         <activity
             android:name=".LessonsPage1"

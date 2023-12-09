@@ -69,7 +69,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Lesson 1"
+                    android:text="LESSON 1"
                     android:textColor="@color/white"
                     android:textSize="50sp" />
 
@@ -148,7 +148,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Lesson 2"
+                    android:text="LESSON 2"
                     android:textColor="@color/white"
                     android:textSize="50sp" />
 
@@ -227,7 +227,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Lesson 3"
+                    android:text="LESSON 3"
                     android:textColor="@color/white"
                     android:textSize="50sp" />
 
