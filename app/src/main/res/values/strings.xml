@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">FinalsApplication</string>
+    <string name="app_name">EmicodeAdmin</string>
+    <string name="remarks_passed">Remarks : <i>Passed</i></string>
+    <string name="remarks_failed">Remarks : <i>Failed</i></string>
+
 </resources>
