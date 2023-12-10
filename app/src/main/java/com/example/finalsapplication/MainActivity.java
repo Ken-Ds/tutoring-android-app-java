@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.finalsapplication.dataType.AccountInfo;
+import com.example.finalsapplication.dataType.DatabaseHelper;
+
 public class MainActivity extends AppCompatActivity {
     private String allowedEmail = "emilysotelo@emicode.com";
     private static final String ALLOWED_PASSWORD = "12345";
@@ -20,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         final Button buttonLogIn = findViewById(R.id.buttonLogIn);
         final EditText editTextCompanyPassword = findViewById(R.id.editTextCompanyPassword);
         final EditText editTextCompanyEmail = findViewById(R.id.editTextCompanyEmail);
