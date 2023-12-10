@@ -41,7 +41,12 @@
             android:exported="false" />
         <activity
             android:name=".TestPage1"
-            android:exported="false" />
+            android:exported="true">
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".ViewTest1"
             android:exported="false" />
@@ -50,7 +55,12 @@
             android:exported="false" />
         <activity
             android:name=".LessonsPage1"
-            android:exported="false" />
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

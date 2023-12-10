@@ -1,6 +1,8 @@
 package com.example.finalsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +43,7 @@ public class LessonsPage1 extends AppCompatActivity {
             public void onClick(View v) {
                 currentLesson = 1;
                 currentTopic = 3;
-                updateButtonState() ;
+                updateButtonState();
             }
         });
 
@@ -119,34 +121,55 @@ public class LessonsPage1 extends AppCompatActivity {
         Button L3T2 = findViewById(R.id.L3T2);
         Button L3T3 = findViewById(R.id.L3T3);
 
-        if (currentLesson == 1) {
-            // Lesson 1
-            L1T1.setEnabled(currentTopic >= 1);
-            L1T2.setEnabled(currentTopic >= 2);
-            L1T3.setEnabled(currentTopic >= 3);
-            // Disable other Lesson 1 buttons based on completion status
-            L2T1.setEnabled(false);
-            L2T2.setEnabled(false);
-            L2T3.setEnabled(false);
-            L3T1.setEnabled(false);
-            L3T2.setEnabled(false);
-            L3T3.setEnabled(false);
-        } else if (currentLesson == 2) {
-            // Lesson 2
-            // Enable or disable buttons for Lesson 2 based on completion status
-            L2T1.setEnabled(currentTopic >= 1);
-            L2T2.setEnabled(currentTopic >= 2);
-            L2T3.setEnabled(currentTopic >= 3);
-            // Disable other Lesson 2 buttons based on completion status
-            L3T1.setEnabled(false);
-            L3T2.setEnabled(false);
-            L3T3.setEnabled(false);
-        } else if (currentLesson == 3) {
-            // Lesson 3
-            // Enable or disable buttons for Lesson 3 based on completion status
-            L3T1.setEnabled(currentTopic >= 1);
-            L3T2.setEnabled(currentTopic >= 2);
-            L3T3.setEnabled(currentTopic >= 3);
+        // Disable buttons by default
+        L1T1.setEnabled(false);
+        L1T2.setEnabled(false);
+        L1T3.setEnabled(false);
+        L2T1.setEnabled(false);
+        L2T2.setEnabled(false);
+        L2T3.setEnabled(false);
+        L3T1.setEnabled(false);
+        L3T2.setEnabled(false);
+        L3T3.setEnabled(false);
+
+        // Set click listener for Topic 1 of Lesson 1
+        if (currentLesson == 1 && currentTopic == 1) {
+            L1T1.setEnabled(true);
+            L1T1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Navigate to the ViewLesson activity for Lesson 1, Topic 1
+                    Intent intent = new Intent(LessonsPage1.this, ViewLesson1.class);
+                    intent.putExtra("lesson", 1);
+                    intent.putExtra("topic", 1);
+                    startActivity(intent);
+                }
+            });
+        } else {
+            // Set click listeners based on the current lesson and topic
+            setButtonClickListener(L1T2, 1, 2);
+            setButtonClickListener(L1T3, 1, 3);
+            setButtonClickListener(L2T1, 2, 1);
+            setButtonClickListener(L2T2, 2, 2);
+            setButtonClickListener(L2T3, 2, 3);
+            setButtonClickListener(L3T1, 3, 1);
+            setButtonClickListener(L3T2, 3, 2);
+            setButtonClickListener(L3T3, 3, 3);
         }
+    }
+
+    private void setButtonClickListener(Button button, final int lesson, final int topic) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentLesson = lesson;
+                currentTopic = topic;
+                // Navigate to the ViewLesson activity based on the lesson and topic
+                Intent intent = new Intent(LessonsPage1.this, ViewLesson1.class);
+                intent.putExtra("lesson", currentLesson);
+                intent.putExtra("topic", currentTopic);
+                startActivity(intent);
+            }
+        });
     }
 }
