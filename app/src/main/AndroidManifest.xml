@@ -20,12 +20,12 @@
             android:exported="false" />
         <activity
             android:name=".about_us"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileInfoUser"
             android:exported="false" />
         <activity
-            android:name=".profile_information_user_side"
-            android:exported="false" />
-        <activity
-            android:name=".profile_information_admin_side"
+            android:name=".ProfileInfoAdmin"
             android:exported="false" />
         <activity
             android:name=".SubmissionPageSuccess1"
