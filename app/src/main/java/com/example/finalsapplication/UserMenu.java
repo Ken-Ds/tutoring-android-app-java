@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.view.View;
 
+
 public class UserMenu extends AppCompatActivity implements View.OnClickListener {
 
     private CardView lessons, profile, records, about;
@@ -36,7 +37,7 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
             i = new Intent(this, ViewTest1.class);
             startActivity(i);
         } else if (v.getId() == R.id.toRecords){
-            i = new Intent(this, ViewLesson1.class);
+            i = new Intent(this, RecordsPage1.class);
             startActivity(i);
         } else if (v.getId() == R.id.toAbout) {
             i = new Intent(this, TestPage1.class);
