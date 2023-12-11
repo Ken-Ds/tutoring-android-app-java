@@ -221,7 +221,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Lesson 3"
+                    android:text="LESSON 3"
                     android:textColor="@color/white"
                     android:textSize="50sp" />
 
