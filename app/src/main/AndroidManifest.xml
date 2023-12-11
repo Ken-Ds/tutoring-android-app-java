@@ -58,7 +58,7 @@
             android:exported="false" />
         <activity
             android:name=".ProfileInfoUser"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RecordsPage1"
             android:exported="true">
