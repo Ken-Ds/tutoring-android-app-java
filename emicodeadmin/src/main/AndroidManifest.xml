@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalsApplication">
         <activity
-            android:name=".AddUser"
+            android:name="com.example.finalsapplication.AddUser"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

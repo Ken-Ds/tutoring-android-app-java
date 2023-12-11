@@ -1,4 +1,4 @@
-package com.example.emicodeadmin;
+package com.example.finalsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 

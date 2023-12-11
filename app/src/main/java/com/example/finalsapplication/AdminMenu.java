@@ -1,4 +1,4 @@
-package com.example.emicodeadmin;
+package com.example.finalsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -29,13 +29,13 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
         Intent i;
 
         if (v.getId() == R.id.ad_toLessons) {
-            i = new Intent(this, EditProfile.class);
+            i = new Intent(this, LessonsPageAdmin2.class);
             startActivity(i);
         } else if (v.getId() == R.id.toUserMan) {
-            i = new Intent(this, AddUser.class);
+            i = new Intent(this, UserManagement.class);
             startActivity(i);
         } else if (v.getId() == R.id.toTest) {
-            i = new Intent(this, EditTest.class);
+            i = new Intent(this, TestPageAdmin2.class);
             startActivity(i);
         }
     }

@@ -1,4 +1,4 @@
-package com.example.emicodeadmin;
+package com.example.finalsapplication;
 
 import android.os.Bundle;
 

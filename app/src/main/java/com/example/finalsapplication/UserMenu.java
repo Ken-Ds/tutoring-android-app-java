@@ -4,6 +4,7 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 
 
@@ -34,13 +35,13 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
             i = new Intent(this, LessonsPage1.class);
             startActivity(i);
         } else if (v.getId() == R.id.toProfile) {
-            i = new Intent(this, ViewTest1.class);
+            i = new Intent(this, ProfileInfoUser.class);
             startActivity(i);
         } else if (v.getId() == R.id.toRecords){
             i = new Intent(this, RecordsPage1.class);
             startActivity(i);
         } else if (v.getId() == R.id.toAbout) {
-            i = new Intent(this, TestPage1.class);
+            i = new Intent(this, AboutUs.class);
             startActivity(i);
         }
     }

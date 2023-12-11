@@ -25,7 +25,7 @@
             android:name=".Header"
             android:exported="false" />
         <activity
-            android:name=".AboutUs"
+            android:name=".about_us"
             android:exported="true" />
         <activity
             android:name=".ProfileInfoUser"
