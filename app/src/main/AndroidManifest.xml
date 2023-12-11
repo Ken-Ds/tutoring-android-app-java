@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FinalsApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ViewLesson1Topic3"
+            android:exported="false" />
+        <activity
+            android:name=".ViewLesson1Topic2"
+            android:exported="false" />
+        <activity
             android:name=".LessonViewTest"
             android:exported="false" />
         <activity
@@ -42,10 +48,11 @@
         <activity
             android:name=".TestPage1"
             android:exported="true">
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ViewTest1"
@@ -56,10 +63,27 @@
         <activity
             android:name=".LessonsPage1"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecordsPage1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserMenu"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

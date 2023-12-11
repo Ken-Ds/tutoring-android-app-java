@@ -399,7 +399,7 @@
                 android:background="#a8b4d8">
 
                 <ImageButton
-                    android:id="@+id/imageButtonBackLP1"
+                    android:id="@+id/backButton"
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
