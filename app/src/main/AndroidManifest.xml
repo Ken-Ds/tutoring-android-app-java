@@ -13,78 +13,37 @@
         android:theme="@style/Theme.FinalsApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ViewLesson1Topic3"
-            android:exported="false" />
+            android:name=".AboutUs"
+            android:exported="true" />
         <activity
-            android:name=".ViewLesson1Topic2"
-            android:exported="false" />
+            android:name=".AddUser"
+            android:exported="true"/>
         <activity
-            android:name=".LessonViewTest"
-            android:exported="false" />
+            android:name=".AdminMenu"
+            android:exported="false"/>
+        <activity
+            android:name=".AdminRecordsPage1"
+            android:exported="false"/>
+        <activity
+            android:name=".EditProfile"
+            android:exported="false"/>
+        <activity
+            android:name=".EditTest"
+            android:exported="false"/>
         <activity
             android:name=".Header"
             android:exported="false" />
         <activity
-            android:name=".about_us"
-            android:exported="true" />
-        <activity
-            android:name=".ProfileInfoUser"
-            android:exported="false" />
-        <activity
-            android:name=".ProfileInfoAdmin"
-            android:exported="false" />
-        <activity
-            android:name=".SubmissionPageSuccess1"
-            android:exported="false" />
-        <activity
-            android:name=".LessonsPageAdmin2"
-            android:exported="false" />
-        <activity
-            android:name=".TestPageAdmin2"
-            android:exported="false" />
-        <activity
-            android:name=".SubmissionPageFailed1"
-            android:exported="false" />
-        <activity
-            android:name=".TestPage1"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ViewTest1"
-            android:exported="false" />
-        <activity
-            android:name=".ViewLesson1"
-            android:exported="false" />
-        <activity
             android:name=".LessonsPage1"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".RecordsPage1"
+            android:name=".LessonsPageAdmin2"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".UserMenu"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".LessonViewTest"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -94,6 +53,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity
+            android:name=".ProfileInfoAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileInfoUser"
+            android:exported="false" />
+        <activity
+            android:name=".RecordsPage1"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SubmissionPageFailed1"
+            android:exported="false" />
+        <activity
+            android:name=".SubmissionPageSuccess1"
+            android:exported="false" />
+        <activity
+            android:name=".TestPage1"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".TestPageAdmin2"
+            android:exported="false" />
+        <activity
+            android:name=".UserManagement"
+            android:exported="false" />
 
+        <activity
+            android:name=".ViewLesson1Topic3"
+            android:exported="false" />
+        <activity
+            android:name=".ViewLesson1Topic2"
+            android:exported="false" />
+        <activity
+            android:name=".UserMenu"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ViewLesson1"
+            android:exported="false" />
+        <activity
+            android:name=".ViewTest1"
+            android:exported="false" />
+    </application>
 </manifest>
