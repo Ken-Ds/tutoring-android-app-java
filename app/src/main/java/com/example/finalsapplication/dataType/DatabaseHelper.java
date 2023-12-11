@@ -2,6 +2,7 @@ package com.example.finalsapplication.dataType;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -14,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ACCOUNT_PASSWORD = "ACCOUNT_PASSWORD";
     public static final String COLUMN_ACCOUNT_LNAME = "ACCOUNT_LNAME";
     public static final String COLUMN_ACCOUNT_FNAME = "ACCOUNT_FNAME";
-    public static final String COLUMN_ACCOUNT_GENDER = "ACCOUNT_GENDER";
+    public static final String COLUMN_ACCOUNT_SEX = "ACCOUNT_SEX";
     public static final String COLUMN_ACCOUNT_DATEOFBIRTH = "ACCOUNT_DATEOFBIRTH";
     public static final String COLUMN_ACCOUNT_DATEHIRED = "ACCOUNT_DATEHIRED";
 
@@ -24,14 +25,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = " CREATE TABLE " + ACCOUNT_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ACCOUNT_ID + " INT , " + COLUMN_ACCOUNT_EMAIL + "TEXT, " + COLUMN_ACCOUNT_PASSWORD + " TEXT, " + COLUMN_ACCOUNT_LNAME + " TEXT, " + COLUMN_ACCOUNT_FNAME + " TEXT, " + COLUMN_ACCOUNT_GENDER + " TEXT, " + COLUMN_ACCOUNT_DATEOFBIRTH + " TEXT, " + COLUMN_ACCOUNT_DATEHIRED  +  " TEXT)";
+        String createTableStatement = "CREATE TABLE " + ACCOUNT_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ACCOUNT_ID + " INT, " + COLUMN_ACCOUNT_EMAIL + " TEXT, " + COLUMN_ACCOUNT_PASSWORD + " TEXT, " + COLUMN_ACCOUNT_LNAME + " TEXT, " + COLUMN_ACCOUNT_FNAME + " TEXT, " + COLUMN_ACCOUNT_SEX + " TEXT, " + COLUMN_ACCOUNT_DATEOFBIRTH + " TEXT, " + COLUMN_ACCOUNT_DATEHIRED  +  " TEXT)";
 
         db.execSQL(createTableStatement);
+
+
+        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_LNAME + ", " + COLUMN_ACCOUNT_FNAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(1, 'admin@emicode.com', '12345', 'DefaultLastName', 'DefaultFirstName', 'Male', '01/01/2000', '01/01/2023')";
+
+        db.execSQL(insertDefaultAdminStatement);
+
+        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_LNAME + ", " + COLUMN_ACCOUNT_FNAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Sotelo', 'Emily', 'F', '11/25/1993', '12/25/2023')";
+
+        db.execSQL(insertDefaultUserStatement);
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("drop Table if exists ACCOUNT_TABLE");
     }
 
     public boolean addOne(AccountInfo accountInfo){
@@ -43,7 +54,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_ACCOUNT_PASSWORD,accountInfo.getPassword());
         cv.put(COLUMN_ACCOUNT_LNAME,accountInfo.getlName());
         cv.put(COLUMN_ACCOUNT_FNAME,accountInfo.getfName());
-        cv.put(COLUMN_ACCOUNT_GENDER,accountInfo.getGender());
+        cv.put(COLUMN_ACCOUNT_SEX,accountInfo.getSex());
         cv.put(COLUMN_ACCOUNT_DATEOFBIRTH,accountInfo.getDateOfBirth());
         cv.put(COLUMN_ACCOUNT_DATEHIRED,accountInfo.getDateHired());
 
@@ -53,4 +64,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }else
             return true;
     }
+
+    public Boolean checkUserEmail(String email) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try (Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNT_TABLE + " WHERE " + COLUMN_ACCOUNT_EMAIL + " = ?", new String[]{email})) {
+            return cursor.getCount() > 0;
+        }
+    }
+
+    public Boolean checkLoginCredentials(String email, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try (Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNT_TABLE + " WHERE " + COLUMN_ACCOUNT_EMAIL + " = ? AND " + COLUMN_ACCOUNT_PASSWORD + " = ?", new String[]{email, password})) {
+            return cursor.getCount() > 0;
+        }
+    }
+
 }

@@ -2,17 +2,17 @@ package com.example.finalsapplication.dataType;
 
 public class AccountInfo {
 
-    private String lName, fName, gender, dateOfBirth, dateHired, password, email;
+    private String lName, fName, sex, dateOfBirth, dateHired, password, email;
     private  int id;
 
 
-    public AccountInfo(int id, String email, String password, String lName, String fName, String gender, String dateOfBirth, String dateHired) {
+    public AccountInfo(int id, String email, String password, String lName, String fName, String sex, String dateOfBirth, String dateHired) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.lName = lName;
         this.fName = fName;
-        this.gender = gender;
+        this.sex = sex;
         this.dateOfBirth = dateOfBirth;
         this.dateHired = dateHired;
     }
@@ -33,13 +33,11 @@ public class AccountInfo {
         this.fName = fName;
     }
 
-    public String getGender() {
-        return gender;
+    public String getSex() {
+        return sex;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+    public void setSex(String sex) { this.sex = sex;}
 
     public String getDateOfBirth() {
         return dateOfBirth;
