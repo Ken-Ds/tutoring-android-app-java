@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProfileInfoAdmin"
     android:background="@drawable/textured_background">
 
     <ScrollView
@@ -123,6 +122,49 @@
                     android:textSize="25sp"
                     android:fontFamily="@font/roboto_black"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquam architecto eius error incidunt numquam quibusdam sunt ullam!"
+                    android:gravity="start|end"
+                    android:textAlignment="viewStart">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Got any question?"
+                    android:gravity="start|end"
+                    android:textAlignment="viewStart">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Contact us at"
+                    android:gravity="start|end"
+                    android:textAlignment="viewStart">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/emailAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="147dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="-27dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="admin@emicode.com"
+                    android:textColor="@color/ourBlue"
                     android:gravity="start|end"
                     android:textAlignment="viewStart">
 
