@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.finalsapplication.dataType.AccountInfo;
-import com.example.finalsapplication.dataType.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
     private String allowedEmail = "emilysotelo@emicode.com";
