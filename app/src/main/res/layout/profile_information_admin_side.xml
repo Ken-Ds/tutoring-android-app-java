@@ -47,6 +47,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:text="Name: Emily Sotelo">
 
                 </TextView>
@@ -58,6 +59,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:text="Email: emilysotelo@emicode.com">
 
                 </TextView>
@@ -69,6 +71,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:text="Employee ID: 2230908">
 
                 </TextView>
@@ -81,6 +84,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
                     android:text="Profile Information">
 
                 </TextView>
@@ -92,6 +96,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:text="Gender: Alien">
 
                 </TextView>
@@ -103,6 +108,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:text="November 25, 1993">
 
                 </TextView>
@@ -114,6 +120,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/black"
                     android:text="December 25, 2023">
 
                 </TextView>
@@ -133,6 +140,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
                     android:text="Lesson 1 Progress">
 
                 </TextView>
@@ -164,6 +172,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
                     android:text="Lesson 2 Progress">
 
                 </TextView>
@@ -195,6 +204,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
                     android:text="Lesson 3 Progress">
 
                 </TextView>
@@ -226,6 +236,7 @@
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/roboto_black"
+                    android:textColor="@color/black"
                     android:padding="8dp"
                     android:text="View Records"
                     android:textSize="25sp"
