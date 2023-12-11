@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
-                    android:fontFamily="@font/roboto_black"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Name: Emily Sotelo">
 
                 </TextView>
@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
-                    android:fontFamily="@font/roboto_black"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Email: emilysotelo@emicode.com">
 
                 </TextView>
@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
-                    android:fontFamily="@font/roboto_black"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Employee ID: 2230908">
 
                 </TextView>
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
-                    android:fontFamily="@font/roboto_black"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Gender: Alien">
 
                 </TextView>
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
-                    android:fontFamily="@font/roboto_black"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="November 25, 1993">
 
                 </TextView>
@@ -114,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
-                    android:fontFamily="@font/roboto_black"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="December 25, 2023">
 
                 </TextView>
