@@ -33,10 +33,8 @@ public class TestPage1 extends AppCompatActivity {
         takeTestLesson2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if Lesson 1 test is completed before moving to Lesson 2 test
-                // You may implement your logic here
 
-                // If Lesson 1 test is completed, navigate to the common test view for Lesson 2
+
                 Intent intent = new Intent(TestPage1.this, ViewTest1.class);
                 startActivity(intent);
             }
@@ -45,10 +43,6 @@ public class TestPage1 extends AppCompatActivity {
         takeTestLesson3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if Lesson 2 test is completed before moving to Lesson 3 test
-                // You may implement your logic here
-
-                // If Lesson 2 test is completed, navigate to the common test view for Lesson 3
                 Intent intent = new Intent(TestPage1.this, ViewTest1.class);
                 startActivity(intent);
             }
@@ -57,10 +51,6 @@ public class TestPage1 extends AppCompatActivity {
         summativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if all Lesson tests are completed before moving to Summative test
-                // You may implement your logic here
-
-                // If all Lesson tests are completed, navigate to the common Summative test view
                 Intent intent = new Intent(TestPage1.this, ViewTest1.class);
                 startActivity(intent);
             }

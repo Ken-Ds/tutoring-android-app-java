@@ -7,7 +7,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class about_us extends AppCompatActivity {
+public class AboutUs extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class about_us extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define the intent to navigate back to the UserMenu activity
-                Intent intent = new Intent(about_us.this, UserMenu.class);
+                Intent intent = new Intent(AboutUs.this, UserMenu.class);
 
                 // Start the UserMenu activity
                 startActivity(intent);
@@ -31,8 +31,5 @@ public class about_us extends AppCompatActivity {
                 finish();
             }
         });
-
-        // Any additional setup or logic for the about_us activity can be added here
-        // For example, you can initialize views, set up click listeners, etc.
     }
 }
