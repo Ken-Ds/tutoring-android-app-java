@@ -65,10 +65,10 @@
             android:exported="true"></activity>
         <activity
             android:name=".SubmissionPageFailed1"
-            android:exported="false" />
+            android:exported="true"></activity>
         <activity
             android:name=".SubmissionPageSuccess1"
-            android:exported="false" />
+            android:exported="true"></activity>
         <activity
             android:name=".TestPage1"
             android:exported="true"></activity>
@@ -92,7 +92,7 @@
             android:exported="false" />
         <activity
             android:name=".ViewTest1"
-            android:exported="false" />
+            android:exported="true"></activity>
     </application>
 
 </manifest>
