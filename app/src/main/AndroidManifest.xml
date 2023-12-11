@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -11,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalsApplication"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".UserAddLesson"
+            android:name=".UserLessonPage"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAddLesson"
             android:exported="false" />
         <activity
             android:name=".AboutUs"
@@ -38,16 +41,16 @@
             android:exported="false" />
         <activity
             android:name=".LessonsPage1"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LessonsPageAdmin2"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LessonViewTest"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -62,7 +65,7 @@
             android:exported="true" />
         <activity
             android:name=".RecordsPage1"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SubmissionPageFailed1"
             android:exported="false" />
@@ -71,7 +74,7 @@
             android:exported="false" />
         <activity
             android:name=".TestPage1"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".TestPageAdmin2"
             android:exported="false" />
@@ -86,7 +89,7 @@
             android:exported="false" />
         <activity
             android:name=".UserMenu"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ViewLesson1"
             android:exported="false" />
