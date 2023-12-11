@@ -91,20 +91,6 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextText2"
             app:srcCompat="@drawable/add_sign" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
-            android:background=""
-            android:fontFamily="@font/roboto_regular"
-            android:text="Add Topic"
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            app:layout_constraintStart_toEndOf="@+id/addTopicLesson1"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
-
         <Button
             android:id="@+id/button"
             android:layout_width="373dp"
