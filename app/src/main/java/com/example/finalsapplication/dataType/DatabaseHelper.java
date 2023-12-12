@@ -5,12 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 
 import androidx.annotation.Nullable;
-
-import com.example.finalsapplication.AddUser;
 
 import java.util.ArrayList;
 
@@ -45,7 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(insertDefaultAdminStatement);
 
-        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Emily Sotelo', 'F', '11/25/1993', '12/25/2023', '')";
+        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Emily Sotelo', 'F', '11/25/1993', '12/25/2023')";
 
         db.execSQL(insertDefaultUserStatement);
     }
@@ -66,7 +62,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_ACCOUNT_SEX,accountInfo.getSex());
         cv.put(COLUMN_ACCOUNT_DATEOFBIRTH,accountInfo.getDateOfBirth());
         cv.put(COLUMN_ACCOUNT_DATEHIRED,accountInfo.getDateHired());
-        cv.put(COLUMN_ACCOUNT_IMAGE, imageInBytes);
 
         long insert = db.insert(ACCOUNT_TABLE, null, cv);
         if (insert == -1){
@@ -150,4 +145,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return user;
     }
 
+        public void deleteAccount(int iD){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(ACCOUNT_TABLE, " ACCOUNT_ID = ? ",new String[]{String.valueOf(iD)});
+    }
 }

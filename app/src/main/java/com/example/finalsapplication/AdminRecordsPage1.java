@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.finalsapplication.admin.AdminMenu;
+
 public class AdminRecordsPage1 extends AppCompatActivity {
     private TextView lesson1Score, lesson2Score, lesson3Score, summativeScore;
     private TextView lesson1Remarks, lesson2Remarks, lesson3Remarks, summativeRemarks;

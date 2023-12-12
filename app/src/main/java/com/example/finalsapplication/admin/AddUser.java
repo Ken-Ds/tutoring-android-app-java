@@ -1,15 +1,13 @@
-package com.example.finalsapplication;
+package com.example.finalsapplication.admin;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.*;
+
+import com.example.finalsapplication.R;
 import com.example.finalsapplication.dataType.AccountInfo;
 import com.example.finalsapplication.dataType.DatabaseHelper;
 
@@ -89,7 +87,7 @@ public class AddUser extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(AddUser.this, UserManagement.class);
+                Intent i = new Intent(AddUser.this, AdminMenu.class);
                 startActivity(i);
             }
         });

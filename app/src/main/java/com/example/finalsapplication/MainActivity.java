@@ -6,17 +6,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.finalsapplication.dataType.AccountInfo;
+import com.example.finalsapplication.admin.AdminMenu;
 import com.example.finalsapplication.dataType.DatabaseHelper;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public String emailInput;
@@ -80,5 +77,6 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(AUTH_TOKEN_KEY, authToken);
         editor.apply();
     }
+
 
 }

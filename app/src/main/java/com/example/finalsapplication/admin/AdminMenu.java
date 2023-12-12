@@ -1,4 +1,4 @@
-package com.example.finalsapplication;
+package com.example.finalsapplication.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -6,6 +6,12 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.finalsapplication.R;
+import com.example.finalsapplication.admin.AddUser;
+import com.example.finalsapplication.admin.DeleteAccount;
+import com.example.finalsapplication.admin.EditAccount;
+import com.example.finalsapplication.admin.ViewAccount;
 
 public class AdminMenu extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,13 +40,13 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
             i = new Intent(this, AddUser.class);
             startActivity(i);
         } else if (v.getId() == R.id.toEdit) {
-            i = new Intent(this, EditProfile.class);
+            i = new Intent(this, EditAccount.class);
             startActivity(i);
         } else if (v.getId() == R.id.toView) {
-            i = new Intent(this, UserManagement.class);
+            i = new Intent(this, ViewAccount.class);
             startActivity(i);
         } else if (v.getId() == R.id.toDelete) {
-            i = new Intent(this, UserManagement.class);
+            i = new Intent(this, DeleteAccount.class);
             startActivity(i);
         }
     }

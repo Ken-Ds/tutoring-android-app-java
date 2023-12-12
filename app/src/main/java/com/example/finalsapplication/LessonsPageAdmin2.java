@@ -32,7 +32,6 @@ public class LessonsPageAdmin2 extends AppCompatActivity {
         l3t2 = (Button) findViewById(R.id.L3T2);
         l3t3 = (Button) findViewById(R.id.L3T3);
 
-        addLesson = (ImageButton) findViewById(R.id.addLesson);
         l1t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

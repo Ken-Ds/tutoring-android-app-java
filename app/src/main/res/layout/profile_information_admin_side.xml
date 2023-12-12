@@ -18,30 +18,13 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:orientation="vertical"
-                android:layout_marginTop="75dp"
-                android:layout_marginLeft="130dp">
-
-                <ImageView
-                    android:id="@+id/profile_pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/custom_profile">
-
-                </ImageView>
-
-            </LinearLayout>
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="50dp">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -53,7 +36,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/user_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -90,7 +73,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/gender"
+                    android:id="@+id/user_sex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -269,16 +252,6 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/arrowleft" />
 
-                    <ImageButton
-                        android:id="@+id/edit_button"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/edit_button_black" />
                 </LinearLayout>
 
             </LinearLayout>
