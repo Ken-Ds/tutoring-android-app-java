@@ -31,7 +31,7 @@
         android:columnCount="2">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/ad_toLessons"
+            android:id="@+id/toAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="15dp"
@@ -51,12 +51,12 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/lessons_icon"
+                    android:src="@drawable/add_sign"
                     android:layout_gravity="center_horizontal"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LESSONS"
+                    android:text="ADD"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/roboto_black"
                     android:textSize="25sp"
@@ -66,7 +66,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/toTest"
+            android:id="@+id/toView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="15dp"
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TESTS"
+                    android:text="VIEW"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/roboto_black"
                     android:textSize="25sp"
@@ -101,7 +101,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/toUserMan"
+            android:id="@+id/toEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="15dp"
@@ -121,15 +121,50 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/profile_icon"
+                    android:src="@drawable/edit_icon"
                     android:layout_gravity="center_horizontal"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="USER MGMT"
+                    android:text="EDIT"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/roboto_black"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="12dp"
+            app:cardElevation="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#A8B4D8"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/delete_trashcan"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DELETE"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/roboto_black"
+                    android:textSize="25sp"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"/>
             </LinearLayout>

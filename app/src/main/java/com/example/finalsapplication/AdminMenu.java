@@ -9,33 +9,38 @@ import android.view.View;
 
 public class AdminMenu extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView lessons, user, test;
+    private CardView add, edit, del, view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_menu);
 
-        lessons = (CardView) findViewById(R.id.ad_toLessons);
-        user = (CardView) findViewById(R.id.toUserMan) ;
-        test = (CardView) findViewById(R.id.toTest);
+        add = (CardView) findViewById(R.id.toAdd);
+        del = (CardView) findViewById(R.id.toDelete);
+        view = (CardView) findViewById(R.id.toView);
+        edit = (CardView) findViewById(R.id.toEdit);
 
-        lessons.setOnClickListener(this);
-        user.setOnClickListener(this);
-        test.setOnClickListener(this);
+        add.setOnClickListener(this);
+        del.setOnClickListener(this);
+        edit.setOnClickListener(this);
+        view.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent i;
 
-        if (v.getId() == R.id.ad_toLessons) {
-            i = new Intent(this, LessonsPageAdmin2.class);
+        if (v.getId() == R.id.toAdd) {
+            i = new Intent(this, AddUser.class);
             startActivity(i);
-        } else if (v.getId() == R.id.toUserMan) {
+        } else if (v.getId() == R.id.toEdit) {
+            i = new Intent(this, EditProfile.class);
+            startActivity(i);
+        } else if (v.getId() == R.id.toView) {
             i = new Intent(this, UserManagement.class);
             startActivity(i);
-        } else if (v.getId() == R.id.toTest) {
-            i = new Intent(this, TestPageAdmin2.class);
+        } else if (v.getId() == R.id.toDelete) {
+            i = new Intent(this, UserManagement.class);
             startActivity(i);
         }
     }
