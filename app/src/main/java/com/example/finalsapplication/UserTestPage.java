@@ -58,6 +58,8 @@ public class UserTestPage extends AppCompatActivity {
     }
 
     private void showQuestions() {
+
+
         QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
 
         TextView questionTextView = findViewById(R.id.textViewQ1);
@@ -71,6 +73,8 @@ public class UserTestPage extends AppCompatActivity {
 
         RadioButton choiceCRadioButton = findViewById(R.id.radioButtonC1);
         choiceCRadioButton.setText(currentQuestion.getChoiceC());
+
+
     }
 
     private void checkAnswer() {
@@ -119,19 +123,19 @@ public class UserTestPage extends AppCompatActivity {
     }
 
     private void navigateToSuccessPage() {
-        Intent intent = new Intent(this, SubmissionPageFailed1.class);
+        Intent intent = new Intent(this, SubmissionPageSuccess1.class);
         startActivity(intent);
         finish();
     }
 
     private void navigateToLessonPage() {
-        Intent intent = new Intent(this, LessonPage.class);
+        Intent intent = new Intent(this, ViewLesson1Topic3.class);
         startActivity(intent);
         finish();
     }
 
     // Inner class representing question details
-    private static class QuestionDetails {
+    static class QuestionDetails {
         private String questionText;
         private String choiceA;
         private String choiceB;
