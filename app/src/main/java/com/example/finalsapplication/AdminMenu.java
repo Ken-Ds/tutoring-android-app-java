@@ -32,7 +32,7 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
             i = new Intent(this, LessonsPageAdmin2.class);
             startActivity(i);
         } else if (v.getId() == R.id.toUserMan) {
-            i = new Intent(this, UserManagement.class);
+            i = new Intent(this, AddUser.class);
             startActivity(i);
         } else if (v.getId() == R.id.toTest) {
             i = new Intent(this, TestPageAdmin2.class);
