@@ -78,7 +78,7 @@
             android:name=".SubmissionPageSuccess1"
             android:exported="true" />
         <activity
-            android:name=".TestPage1"
+            android:name=".LessonPage"
             android:exported="true" />
         <activity
             android:name=".TestPageAdmin2"

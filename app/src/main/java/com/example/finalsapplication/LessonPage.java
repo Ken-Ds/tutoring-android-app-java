@@ -3,14 +3,13 @@ package com.example.finalsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class TestPage1 extends AppCompatActivity {
+public class LessonPage extends AppCompatActivity {
 
     private int currentLesson = 1;
     private int currentTopic = 1;
@@ -74,7 +73,7 @@ public class TestPage1 extends AppCompatActivity {
             L1T1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(TestPage1.this, ViewLesson1.class);
+                    Intent intent = new Intent(LessonPage.this, ViewLesson1.class);
                     startActivity(intent);
                 }
             });
@@ -98,10 +97,10 @@ public class TestPage1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (lesson1Topic3Completed && lesson2Topic3Completed && lesson3Topic3Completed) {
-                    Intent intent = new Intent(TestPage1.this, UserTestPage.class);
+                    Intent intent = new Intent(LessonPage.this, UserTestPage.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(TestPage1.this, "Complete all lessons before taking summative test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LessonPage.this, "Complete all lessons before taking summative test", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -115,7 +114,7 @@ public class TestPage1 extends AppCompatActivity {
                 currentTopic = topic;
 
                 Class<?> targetClass = determineTargetClass(currentLesson, currentTopic);
-                Intent intent = new Intent(TestPage1.this, targetClass);
+                Intent intent = new Intent(LessonPage.this, targetClass);
                 startActivity(intent);
             }
         });
@@ -129,6 +128,6 @@ public class TestPage1 extends AppCompatActivity {
         } else if (lesson == 1 && topic == 3) {
             return ViewLesson1Topic3.class;
         }
-        return TestPage1.class;
+        return LessonPage.class;
     }
 }
