@@ -2,6 +2,7 @@ package com.example.finalsapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -52,10 +53,19 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define the intent to navigate to the Edit page
-                Intent intent = new Intent(ProfileInfoAdmin.this, EditProfile.class);
 
+
+                Intent intent = getIntent();
+                String name = intent.getStringExtra("name");
+                String email = intent.getStringExtra("email");
+                String id = intent.getStringExtra("id");
+
+                Intent i = new Intent(ProfileInfoAdmin.this, EditProfile.class);
+                i.putExtra("name", name);
+                i.putExtra("email", email);
+                i.putExtra("id", id);
                 // Start the Edit activity
-                startActivity(intent);
+                startActivity(i);
             }
         });
 

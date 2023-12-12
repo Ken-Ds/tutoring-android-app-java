@@ -47,7 +47,6 @@ public class EditProfile extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         String email = intent.getStringExtra("email");
         String id = intent.getStringExtra("id");
-        Log.d("name",name);
 
         getTextName.setText(name);
         getTextEmail.setText(email);
@@ -60,8 +59,16 @@ public class EditProfile extends AppCompatActivity {
                 String newEmail = String.valueOf(getTextEmail.getText());
                 String newId = String.valueOf(getTextEmployeeID.getText());
 
-                db.updateAccount(name,newName,newEmail,Integer.parseInt(newId));
-                Toast.makeText(EditProfile.this,"Update Successful",Toast.LENGTH_SHORT).show();
+                if(newName.isEmpty()){
+                    Toast.makeText(EditProfile.this,"The Name Field Is Empty",Toast.LENGTH_SHORT).show();
+                } else if(newEmail.isEmpty()){
+                    Toast.makeText(EditProfile.this,"The Email Field Is Empty",Toast.LENGTH_SHORT).show();
+                } else if(newId.isEmpty()){
+                    Toast.makeText(EditProfile.this,"The Id Field Is Empty",Toast.LENGTH_SHORT).show();
+                } else {
+                    db.updateAccount(name, newName, newEmail, Integer.parseInt(newId));
+                    Toast.makeText(EditProfile.this, "Update Successful", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

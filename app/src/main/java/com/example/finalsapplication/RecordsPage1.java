@@ -33,8 +33,8 @@ public class RecordsPage1 extends AppCompatActivity {
         back = (ImageButton) findViewById(R.id.backButton);
         back();
 
-        int total1 = 0,total2 = 0,total3 = 0,summativeTotal = 0;
-        int score1 = 0,score2 = 0,score3 = 0,summativeScore = 0;
+        int total1 = 0,total2 = 0,total3 = 0,sumTotal = 0;
+        int score1 = 0,score2 = 0,score3 = 0,sumScore = 0;
         boolean lesson1Passed,lesson2Passed, lesson3Passed, summativePassed;
 
         lesson1Score.setText(displayScoreAndTotal(score1,total1));
@@ -48,6 +48,10 @@ public class RecordsPage1 extends AppCompatActivity {
         lesson3Score.setText(displayScoreAndTotal(score3,total3));
         lesson3Passed = isPassed(score3, total3);
         lesson3Remarks.setText(displayRemarks(lesson3Passed));
+
+        summativeScore.setText(displayScoreAndTotal(sumScore,sumTotal));
+        summativePassed = isPassed(sumScore,sumTotal);
+        summativeRemarks.setText(displayRemarks(summativePassed));
     }
 
     public void back(){

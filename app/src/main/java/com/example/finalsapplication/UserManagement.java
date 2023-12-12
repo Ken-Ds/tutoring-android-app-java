@@ -72,11 +72,10 @@ public class UserManagement extends AppCompatActivity {
                         editAccount = accountInfos.get(position);
                     }
                 }
-                Intent i = new Intent(UserManagement.this, EditProfile.class);
-                i.putExtra("name", editAccount.getName());
-                i.putExtra("email", editAccount.getEmail());
-                i.putExtra("id", String.valueOf(editAccount.getId()));
                 Intent i1 = new Intent(UserManagement.this, ProfileInfoAdmin.class);
+                i1.putExtra("name", editAccount.getName());
+                i1.putExtra("email", editAccount.getEmail());
+                i1.putExtra("id", String.valueOf(editAccount.getId()));
                 startActivity(i1);
             }
         });
