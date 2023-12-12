@@ -10,7 +10,6 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 public class ProfileInfoAdmin extends AppCompatActivity {
 
@@ -27,7 +26,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_information_admin_side);
 
-        // Find the back button in your layout by its ID
+        // Find the back button in the layout by its ID
         ImageButton backButton = findViewById(R.id.imageButtonBackLP1);
 
         // Set an OnClickListener for the back button
@@ -37,7 +36,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
                 // Define the intent to navigate back to the UserManagement activity
                 Intent intent = new Intent(ProfileInfoAdmin.this, UserManagement.class);
 
-                // Start the UserMenu activity
+                // Start the UserManagement activity
                 startActivity(intent);
 
                 // Finish the current activity (profile_information_admin_side)
@@ -45,7 +44,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             }
         });
 
-        // Find the edit button in your layout by its ID
+        // Find the edit button in the layout by its ID
         ImageButton editButton = findViewById(R.id.edit_button);
 
         // Set an OnClickListener for the edit button
@@ -75,22 +74,19 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             }
         });
 
-        // Find the progress bars in your layout by their IDs
+        // Find the progress bars in the layout by their IDs
         progressBarLesson1 = findViewById(R.id.progressBar_lesson1);
         progressBarLesson2 = findViewById(R.id.progressBar_lesson2);
         progressBarLesson3 = findViewById(R.id.progressBar_lesson3);
 
-        // Inflate layout_1.xml
         View layout1 = getLayoutInflater().inflate(R.layout.view_lesson1_topic1, null);
-        ScrollView scrollViewT1 = layout1.findViewById(R.id.scrollViewT1);
+        scrollViewLessons1 = layout1.findViewById(R.id.scrollViewT1);
 
-        // Inflate layout_2.xml
         View layout2 = getLayoutInflater().inflate(R.layout.view_lesson1_topic2, null);
-        ScrollView scrollViewLesson2 = layout2.findViewById(R.id.LessonView2ScrollView);
+        scrollViewLessons2 = layout2.findViewById(R.id.LessonView2ScrollView);
 
-        // Inflate layout_3.xml
         View layout3 = getLayoutInflater().inflate(R.layout.view_lesson1_topic3, null);
-        ScrollView scrollViewLesson3 = layout3.findViewById(R.id.LessonView3ScrollView);
+        scrollViewLessons3 = layout3.findViewById(R.id.LessonView3ScrollView);
 
         // Set OnScrollChangeListeners for the ScrollViews
         scrollViewLessons1.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
@@ -126,8 +122,6 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             int progress = (int) ((float) scrollY / maxScroll * 100);
 
             // Update progress bars
-            progressBarLesson1.setProgress(progress);
-            progressBarLesson2.setProgress(progress);
-            progressBarLesson3.setProgress(progress);
+            progressBar.setProgress(progress);
         }
 }
