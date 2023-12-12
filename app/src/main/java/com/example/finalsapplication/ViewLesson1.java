@@ -3,12 +3,9 @@ package com.example.finalsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ViewLesson1 extends AppCompatActivity {
 
@@ -51,7 +48,7 @@ public class ViewLesson1 extends AppCompatActivity {
         imageButtonBackVL1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewLesson1.this, TestPage1.class);
+                Intent intent = new Intent(ViewLesson1.this, LessonPage.class);
                 startActivity(intent);
             }
         });

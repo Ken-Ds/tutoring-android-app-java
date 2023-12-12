@@ -48,7 +48,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define the intent to navigate to the Edit page
-                Intent intent = new Intent(ProfileInfoAdmin.this, TestPage1.class);
+                Intent intent = new Intent(ProfileInfoAdmin.this, LessonPage.class);
 
                 // Start the Edit activity
                 startActivity(intent);
