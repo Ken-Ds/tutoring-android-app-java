@@ -6,6 +6,7 @@
     android:background="#e9e9e9">
 
     <ScrollView
+        android:id="@+id/LessonView3ScrollView"
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
