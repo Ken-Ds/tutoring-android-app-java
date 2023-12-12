@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import androidx.annotation.Nullable;
 
@@ -120,6 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<AccountInfo> accountInfos = new ArrayList<>();
 
         while (cursor.moveToNext()){
+
             AccountInfo account = new AccountInfo();
             account.setId(cursor.getInt(1));
             account.setEmail(cursor.getString(2));
@@ -128,6 +130,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             account.setSex(cursor.getString(5));
             account.setDateOfBirth(cursor.getString(6));
             account.setDateHired(cursor.getString(7));
+            byte[] imageData = cursor.getBlob(8);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(imageData,0,imageData.length);
+
+            account.setProfileImage(bitmap);
+
             accountInfos.add(account);
         }
         return accountInfos;
