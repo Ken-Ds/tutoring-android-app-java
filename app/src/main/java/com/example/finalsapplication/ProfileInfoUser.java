@@ -3,9 +3,11 @@ package com.example.finalsapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,38 +56,28 @@ public class ProfileInfoUser extends AppCompatActivity {
         ProgressBar progressBarLesson2 = findViewById(R.id.progressBar_lesson2);
         ProgressBar progressBarLesson3 = findViewById(R.id.progressBar_lesson3);
 
-        // Set an OnClickListener for each progress bar
-        progressBarLesson1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Define the intent to navigate to the Lessons page
-                Intent intent = new Intent(ProfileInfoUser.this, TestPage1.class);
+        // Find the ScrollView in your layout by its ID
+        ScrollView scrollView = findViewById(R.id.scrollView);
 
-                // Start the Lessons activity
-                startActivity(intent);
+        // Set an OnScrollChangeListener for the ScrollView
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                // Update progress based on scroll position
+                updateProgress(scrollView.getScrollY());
             }
         });
 
-        progressBarLesson2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Define the intent to navigate to the Lessons page
-                Intent intent = new Intent(ProfileInfoUser.this, TestPage1.class);
+        // Method to update progress based on scroll position
+        private void updateProgress(int scrollY) {
+            // Calculate progress based on your scroll position and the ScrollView's content height
+            int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
+            int progress = (int) ((float) scrollY / maxScroll * 100);
 
-                // Start the Lessons activity
-                startActivity(intent);
-            }
-        });
-
-        progressBarLesson3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Define the intent to navigate to the Lessons page
-                Intent intent = new Intent(ProfileInfoUser.this, TestPage1.class);
-
-                // Start the Lessons activity
-                startActivity(intent);
-            }
-        });
+            // Update your progress bars here
+            progressBarLesson1.setProgress(progress);
+            progressBarLesson2.setProgress(progress);
+            progressBarLesson3.setProgress(progress);
+        }
     }
 }
