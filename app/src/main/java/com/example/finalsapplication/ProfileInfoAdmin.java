@@ -10,12 +10,17 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class ProfileInfoAdmin extends AppCompatActivity {
 
     private ProgressBar progressBarLesson1;
     private ProgressBar progressBarLesson2;
     private ProgressBar progressBarLesson3;
+    private ScrollView scrollViewLessons1;
+    private ScrollView scrollViewLessons2;
+    private ScrollView scrollViewLessons3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +34,8 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Define the intent to navigate back to the UserMenu activity
-                Intent intent = new Intent(ProfileInfoAdmin.this, UserMenu.class);
+                // Define the intent to navigate back to the UserManagement activity
+                Intent intent = new Intent(ProfileInfoAdmin.this, UserManagement.class);
 
                 // Start the UserMenu activity
                 startActivity(intent);
@@ -48,7 +53,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define the intent to navigate to the Edit page
-                Intent intent = new Intent(ProfileInfoAdmin.this, LessonPage.class);
+                Intent intent = new Intent(ProfileInfoAdmin.this, EditProfile.class);
 
                 // Start the Edit activity
                 startActivity(intent);
@@ -71,32 +76,58 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         });
 
         // Find the progress bars in your layout by their IDs
-        ProgressBar progressBarLesson1 = findViewById(R.id.progressBar_lesson1);
-        ProgressBar progressBarLesson2 = findViewById(R.id.progressBar_lesson2);
-        ProgressBar progressBarLesson3 = findViewById(R.id.progressBar_lesson3);
+        progressBarLesson1 = findViewById(R.id.progressBar_lesson1);
+        progressBarLesson2 = findViewById(R.id.progressBar_lesson2);
+        progressBarLesson3 = findViewById(R.id.progressBar_lesson3);
 
-        // Find the ScrollView in your layout by its ID
-        ScrollView scrollView = findViewById(R.id.scrollView);
+        // Inflate layout_1.xml
+        View layout1 = getLayoutInflater().inflate(R.layout.view_lesson1_topic1, null);
+        ScrollView scrollViewT1 = layout1.findViewById(R.id.scrollViewT1);
 
-        // Set an OnScrollChangeListener for the ScrollView
-        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+        // Inflate layout_2.xml
+        View layout2 = getLayoutInflater().inflate(R.layout.view_lesson1_topic2, null);
+        ScrollView scrollViewLesson2 = layout2.findViewById(R.id.LessonView2ScrollView);
+
+        // Inflate layout_3.xml
+        View layout3 = getLayoutInflater().inflate(R.layout.view_lesson1_topic3, null);
+        ScrollView scrollViewLesson3 = layout3.findViewById(R.id.LessonView3ScrollView);
+
+        // Set OnScrollChangeListeners for the ScrollViews
+        scrollViewLessons1.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
             public void onScrollChanged() {
-                // Update progress based on scroll position
-                updateProgress(scrollView.getScrollY());
+                // Update progress based on scroll position for ProgressBar1
+                updateProgress(progressBarLesson1, scrollViewLessons1);
             }
         });
 
+        scrollViewLessons2.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                // Update progress based on scroll position for ProgressBar2
+                updateProgress(progressBarLesson2, scrollViewLessons2);
+            }
+        });
+
+        scrollViewLessons3.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                // Update progress based on scroll position for ProgressBar3
+                updateProgress(progressBarLesson3, scrollViewLessons3);
+            }
+        });
+    }
+
         // Method to update progress based on scroll position
-        private void updateProgress(int scrollY) {
+        private void updateProgress(ProgressBar progressBar, ScrollView scrollView) {
             // Calculate progress based on your scroll position and the ScrollView's content height
             int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
+            int scrollY = scrollView.getScrollY();
             int progress = (int) ((float) scrollY / maxScroll * 100);
 
-            // Update your progress bars here
+            // Update progress bars
             progressBarLesson1.setProgress(progress);
             progressBarLesson2.setProgress(progress);
             progressBarLesson3.setProgress(progress);
         }
-    }
 }
