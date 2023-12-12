@@ -58,7 +58,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:background="null"/>
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteTest1"
@@ -92,7 +92,7 @@
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginBottom="20dp"
-                    android:background="null"/>
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteTest2"
@@ -126,7 +126,7 @@
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginBottom="20dp"
-                    android:background="null"/>
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteTest3"
@@ -160,7 +160,7 @@
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginBottom="20dp"
-                    android:background="null"/>
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteSummativeTest"
