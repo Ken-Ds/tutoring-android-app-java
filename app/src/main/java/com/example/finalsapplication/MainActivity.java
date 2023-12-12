@@ -3,6 +3,7 @@ package com.example.finalsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -18,6 +19,8 @@ import com.example.finalsapplication.dataType.DatabaseHelper;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    public String emailInput;
+    private static final String AUTH_TOKEN_KEY = "auth_token";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                String emailInput = editTextCompanyEmail.getText().toString();
+                emailInput = editTextCompanyEmail.getText().toString();
                 String passwordInput = editTextCompanyPassword.getText().toString();
 
                 if (emailInput.isEmpty() || passwordInput.isEmpty()) {
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent toAdmin = new Intent (MainActivity.this, AdminMenu.class);
                             startActivity(toAdmin);
                         } else {
+                            storeAuthToken(emailInput);
                             Intent toUser = new Intent(MainActivity.this, UserMenu.class);
                             startActivity(toUser);
                         }
@@ -69,4 +73,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void storeAuthToken(String authToken) {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(AUTH_TOKEN_KEY, authToken);
+        editor.apply();
+    }
+
 }

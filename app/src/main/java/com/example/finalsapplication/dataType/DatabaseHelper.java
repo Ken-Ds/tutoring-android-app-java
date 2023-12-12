@@ -59,12 +59,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean addOne(AccountInfo accountInfo){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        Bitmap imageToStoreBitmap = accountInfo.getProfileImage();
-
-        byteArrayOutputStream = new ByteArrayOutputStream();
-        imageToStoreBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
-        imageInBytes = byteArrayOutputStream.toByteArray();
-
         cv.put(COLUMN_ACCOUNT_ID,accountInfo.getId());
         cv.put(COLUMN_ACCOUNT_EMAIL,accountInfo.getEmail());
         cv.put(COLUMN_ACCOUNT_PASSWORD,accountInfo.getPassword());
@@ -136,12 +130,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return accountInfos;
     }
 
-    /*
-    public Cursor getUser(){
-        SQLiteDatabase db= this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("Select * from ACCOUNT_TABLE", null);
-        return cursor;
+    public AccountInfo getUserByEmail(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        AccountInfo user = null;
+
+        try (Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNT_TABLE + " WHERE " + COLUMN_ACCOUNT_EMAIL + " = ?", new String[]{email})) {
+            if (cursor.moveToFirst()) {
+                int id = cursor.getInt(1);
+                String password = cursor.getString(3);
+                String name = cursor.getString(4);
+                String sex = cursor.getString(5);
+                String dateOfBirth = cursor.getString(6);
+                String dateHired = cursor.getString(7);
+
+                user = new AccountInfo(id, email, password, name, sex, dateOfBirth, dateHired);
+            }
+        }
+
+        return user;
     }
 
-     */
 }

@@ -235,38 +235,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewProfilePictureAu"
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Profile Picture:"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"/>
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="262dp"
-                    android:layout_height="239dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/custom_upload_picture_icon" />
-
-                <Button
-                android:id="@+id/buttonUploadPictureAU"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Upload Picture"
-                android:textColor="@color/black"
-                android:layout_marginLeft="127dp"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

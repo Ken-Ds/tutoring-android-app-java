@@ -19,10 +19,6 @@ public class AddUser extends AppCompatActivity {
     private RadioGroup sexRG;
     private RadioButton chosenRB;
     private DatabaseHelper DB;
-    private ImageView pfp;
-    private static final int PICK_IMAGE_REQUEST = 99;
-    private Uri imagePath;
-    private Bitmap imageToStore;
 
 
     @Override
@@ -37,28 +33,10 @@ public class AddUser extends AppCompatActivity {
         sexRG = findViewById(R.id.radioButtonSex);
         date_hiredET = findViewById(R.id.editTextDateHiredAU);
         date_birthET = findViewById(R.id.editTextBirthDateAU);
-        pfp = findViewById(R.id.imageView);
-        Button upload = findViewById(R.id.buttonUploadPictureAU);
         Button submit = findViewById(R.id.buttonSubmitVT1);
         ImageButton back = findViewById(R.id.imageButtonBackVT1);
         DB = new DatabaseHelper(this);
 
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                try {
-                    Intent intent = new Intent();
-                    intent.setType("image/*");
-                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(intent, PICK_IMAGE_REQUEST);
-
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +48,6 @@ public class AddUser extends AppCompatActivity {
                 } catch (NullPointerException ex){
                     Toast.makeText(AddUser.this, "Sex field is empty", Toast.LENGTH_SHORT).show();
                 }
-
 
                 String name = nameET.getText().toString();
                 String id = idET.getText().toString();
@@ -91,10 +68,8 @@ public class AddUser extends AppCompatActivity {
                    Toast.makeText(AddUser.this, "Date hired field is empty", Toast.LENGTH_SHORT).show();
                } else if (date_birth.isEmpty()) {
                    Toast.makeText(AddUser.this, "Date of birth field is empty", Toast.LENGTH_SHORT).show();
-               } else if (pfp.getDrawable() == null || imageToStore == null) {
-                   Toast.makeText(AddUser.this, "Profile Picture is empty", Toast.LENGTH_SHORT).show();
-               } else {
-                    AccountInfo newUser = new AccountInfo(Integer.parseInt(id), email, password, name, sex, date_birth, date_hired, imageToStore);
+               }  else {
+                    AccountInfo newUser = new AccountInfo(Integer.parseInt(id), email, password, name, sex, date_birth, date_hired);
                     boolean checkID = DB.checkUserID(id);
                     boolean checkEmail = DB.checkUserEmail(email);
                     if  (checkID) {
@@ -119,24 +94,5 @@ public class AddUser extends AppCompatActivity {
             }
         });
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        try {
-            super.onActivityResult(requestCode, resultCode, data);
-            if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
-                imagePath = data.getData();
-                imageToStore = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
-                pfp.setImageBitmap(imageToStore);
-            }
-
-        } catch (Exception e){
-            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-
-
-
-    }
-
 
 }

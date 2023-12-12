@@ -41,26 +41,24 @@
                 android:layout_marginTop="50dp">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Name: Emily Sotelo">
+                    android:textColor="@color/black">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/user_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Email: emilysotelo@emicode.com">
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -71,8 +69,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Employee ID: 2230908">
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -90,7 +87,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/gender"
+                    android:id="@+id/user_sex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
