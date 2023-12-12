@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTableStatement);
 
 
-        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + "," + COLUMN_ACCOUNT_IMAGE + ") VALUES(1, 'admin@emicode.com', '12345', 'Admin', 'Male', '01/01/2000', '01/01/2023', '')";
+        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + "," + COLUMN_ACCOUNT_IMAGE + ") VALUES(1, 'admin@emicode.com', '12345', 'Admin', 'M', '01/01/2000', '01/01/2023', '')";
 
         db.execSQL(insertDefaultAdminStatement);
 
@@ -78,6 +78,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }else
             return true;
+    }
+
+    public void updateAccount(String originalName, String newName, String newEmail, int newId){
+        AccountInfo accountUpdate = new AccountInfo();
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_ACCOUNT_NAME, newName);
+        cv.put(COLUMN_ACCOUNT_ID, newId);
+        cv.put(COLUMN_ACCOUNT_EMAIL, newEmail);
+
+        db.update(ACCOUNT_TABLE, cv," ACCOUNT_NAME = ? ", new String[]{originalName});
     }
 
     public Boolean checkUserEmail(String email) {
