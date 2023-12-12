@@ -9,6 +9,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+
 import com.google.android.material.navigation.NavigationView;
 
 public class ViewLesson1Topic3 extends AppCompatActivity {
@@ -25,6 +28,8 @@ public class ViewLesson1Topic3 extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        ImageButton back = findViewById(R.id.imageButtonBackVL1);
+        ImageButton next = findViewById(R.id.imageButtonNextVL1);
 
         navigationView.bringToFront();
         setSupportActionBar(toolbar);
@@ -41,7 +46,7 @@ public class ViewLesson1Topic3 extends AppCompatActivity {
                 Intent i;
 
                 if (itemId == R.id.jumptopic1) {
-                    i = new Intent(ViewLesson1Topic3.this, LessonViewTest.class);
+                    i = new Intent(ViewLesson1Topic3.this, ViewLesson1.class);
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
@@ -63,6 +68,22 @@ public class ViewLesson1Topic3 extends AppCompatActivity {
                 }
 
                 return false;
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ViewLesson1Topic3.this, ViewLesson1Topic2.class);
+                startActivity(i);
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ViewLesson1Topic3.this, ViewTest1.class);
+                startActivity(i);
             }
         });
     }

@@ -8,6 +8,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,11 +25,13 @@ public class ViewLesson1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lesson_view_test);
+        setContentView(R.layout.view_lesson1_topic1);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        ImageButton back = findViewById(R.id.imageButtonBackVL1);
+        ImageButton next = findViewById(R.id.imageButtonNextVL1);
 
         navigationView.bringToFront();
         setSupportActionBar(toolbar);
@@ -42,28 +48,44 @@ public class ViewLesson1 extends AppCompatActivity {
                 Intent i;
 
                 if (itemId == R.id.jumptopic1) {
-                    i = new Intent(LessonViewTest.this, LessonViewTest.class);
+                    i = new Intent(ViewLesson1.this, ViewLesson1.class);
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
                 } else if (itemId == R.id.jumptopic2) {
-                    i = new Intent(LessonViewTest.this, ViewLesson1Topic2.class);
+                    i = new Intent(ViewLesson1.this, ViewLesson1Topic2.class);
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
                 } else if (itemId == R.id.jumptopic3) {
-                    i = new Intent(LessonViewTest.this, ViewLesson1Topic3.class);
+                    i = new Intent(ViewLesson1.this, ViewLesson1Topic3.class);
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
                 } else if (itemId == R.id.jumplesson1test) {
-                    i = new Intent(LessonViewTest.this, UserTestPage.class);
+                    i = new Intent(ViewLesson1.this, UserTestPage.class);
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
                 }
 
                 return false;
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ViewLesson1.this, UserMenu.class);
+                startActivity(i);
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ViewLesson1.this, ViewLesson1Topic2.class);
+                startActivity(i);
             }
         });
     }
