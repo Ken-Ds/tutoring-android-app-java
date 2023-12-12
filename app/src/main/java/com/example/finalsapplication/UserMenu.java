@@ -32,7 +32,7 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
         Intent i;
 
         if (v.getId() == R.id.toLessons){
-            i = new Intent(this, LessonsPage1.class);
+            i = new Intent(this, LessonPage.class);
             startActivity(i);
         } else if (v.getId() == R.id.toProfile) {
             i = new Intent(this, ProfileInfoUser.class);
