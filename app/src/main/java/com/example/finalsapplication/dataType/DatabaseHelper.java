@@ -130,10 +130,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             account.setSex(cursor.getString(5));
             account.setDateOfBirth(cursor.getString(6));
             account.setDateHired(cursor.getString(7));
-            byte[] imageData = cursor.getBlob(8);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(imageData,0,imageData.length);
-
-            account.setProfileImage(bitmap);
 
             accountInfos.add(account);
         }
