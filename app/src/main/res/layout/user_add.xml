@@ -17,6 +17,7 @@
 
             <TextView
                 android:id="@+id/textViewAddUser"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ADD USER"
@@ -34,6 +35,7 @@
                 android:id="@+id/textViewNameAU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="Name:"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
@@ -44,17 +46,20 @@
                 android:id="@+id/editTextNameAU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:ems="10"
                 android:inputType="text"
                 android:background="@drawable/square_button_colored_border"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="60dp"
-                android:paddingBottom="20dp"/>
-
+                android:paddingTop="10dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="10dp"/>
             <TextView
                 android:id="@+id/textViewEmployeeIDAU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="Employee ID:"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
@@ -67,16 +72,20 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:background="@drawable/square_button_colored_border"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="60dp"
-                android:paddingBottom="20dp"/>
+                android:paddingTop="10dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textViewEmailAU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Email:"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
                 android:layout_marginStart="20dp"
@@ -87,17 +96,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
+                android:textColor="@color/black"
                 android:background="@drawable/square_button_colored_border"
                 android:layout_marginLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="8dp"
                 android:layout_marginRight="60dp"
-                android:paddingBottom="20dp"/>
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textViewPasswordAU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Password:"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
                 android:layout_marginStart="20dp"
@@ -108,17 +120,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:paddingLeft="8dp"
                 android:background="@drawable/square_button_colored_border"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="60dp"
-                android:paddingBottom="20dp" />
+                android:paddingBottom="10dp" />
 
             <TextView
                 android:id="@+id/textViewSexAU"
                 android:layout_width="213dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Sex:"
@@ -133,6 +149,7 @@
 
                     <RadioButton
                         android:id="@+id/radioButtonA4"
+                        android:textColor="@color/black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -142,6 +159,7 @@
 
                     <RadioButton
                         android:id="@+id/radioButtonB4"
+                        android:textColor="@color/black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="90dp"
@@ -157,22 +175,23 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewDateHiredAU"
+                android:id="@+id/textViewBirthDateAU"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date Hired:"
+                android:text="Date of Birth:"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="20sp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/editTextDateHiredAU"
+                android:id="@+id/editTextBirthDateAU"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:text="DD/MM/YYYY"
-                android:inputType="number"
+                android:hint="DD/MM/YYYY"
                 android:fontFamily="@font/roboto_light"
                 android:background="@drawable/square_button_colored_border"
                 android:layout_marginLeft="20dp"
@@ -184,12 +203,46 @@
         </LinearLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewDateHiredAU"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Hired:"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/editTextDateHiredAU"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="DD/MM/YYYY"
+                    android:fontFamily="@font/roboto_light"
+                    android:background="@drawable/square_button_colored_border"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="60dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textViewProfilePictureAu"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -200,10 +253,10 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="350dp"
-                    android:layout_height="125dp"
-                    android:src="@drawable/custom_upload_picture_icon"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_width="262dp"
+                    android:layout_height="239dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/custom_upload_picture_icon" />
 
                 <Button
                 android:id="@+id/buttonUploadPictureAU"
@@ -218,24 +271,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dip"
+
             android:layout_alignParentBottom="true"
             android:background="#a8b4d8">
 
             <ImageButton
                 android:id="@+id/imageButtonBackVT1"
                 android:layout_width="76dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginStart="20dp"
                 android:background="?android:attr/selectableItemBackground"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/arrowleft" />
 
             <Button
                 android:id="@+id/buttonSubmitVT1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="210dp"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="170dp"
                 android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_button"
                 android:fontFamily="@font/roboto_light"
                 android:scaleType="fitCenter"
