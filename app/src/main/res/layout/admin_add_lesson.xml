@@ -79,39 +79,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <ImageButton
+        <Button
             android:id="@+id/addTopicLesson1"
-            android:layout_width="64dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:background="@color/ourBlue"
-            android:scaleType="fitCenter"
+            android:layout_width="219dp"
+            android:layout_height="99dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:text="+  Add Topic"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText4"
             app:srcCompat="@drawable/add_sign" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="373dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="452dp"
+            android:layout_width="331dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="#4f5a99"
             android:text="Add Lesson"
             android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/addTopicLesson1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dip"
             android:layout_alignParentBottom="true"
             android:background="#a8b4d8"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintVertical_bias="1.0">
 
             <ImageButton
                 android:id="@+id/backButton"
@@ -125,17 +129,19 @@
                 android:src="@drawable/arrowleft" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="416dp"
-            android:text="Add Topic"
-            android:textColor="@color/white"
-            android:textSize="30sp"
+        <EditText
+            android:id="@+id/editTextText4"
+            android:layout_width="356dp"
+            android:layout_height="214dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            android:hint="  Insert Topic Contents"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
