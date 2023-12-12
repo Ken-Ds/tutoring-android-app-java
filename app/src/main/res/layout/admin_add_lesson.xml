@@ -125,5 +125,17 @@
                 android:src="@drawable/arrowleft" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="416dp"
+            android:text="Add Topic"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
