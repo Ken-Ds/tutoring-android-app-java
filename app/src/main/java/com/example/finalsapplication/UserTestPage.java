@@ -11,13 +11,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class UserTestPage extends AppCompatActivity {
-    private List<Question> questions;
+    private List<QuestionDetails> questions;
     private int currentQuestionIndex = 0;
     private int score = 0;
     private int attempts = 0;
@@ -49,17 +48,17 @@ public class UserTestPage extends AppCompatActivity {
         });
     }
 
-    private List<Question> generateQuestions() {
-        List<Question> allQuestions = new ArrayList<>();
+    private List<QuestionDetails> generateQuestions() {
+        List<QuestionDetails> allQuestions = new ArrayList<>();
         // Add your questions here
-        allQuestions.add(new Question("Lorem ipsum dolor sit amet?", "A", "B", "C", "A"));
+        allQuestions.add(new QuestionDetails("Lorem ipsum dolor sit amet?", "A", "B", "C", "A"));
 
         Collections.shuffle(allQuestions);
         return allQuestions.subList(0, 5);
     }
 
     private void showQuestions() {
-        Question currentQuestion = questions.get(currentQuestionIndex);
+        QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
 
         TextView questionTextView = findViewById(R.id.textViewQ1);
         questionTextView.setText(currentQuestion.getQuestionText());
@@ -81,7 +80,7 @@ public class UserTestPage extends AppCompatActivity {
 
         if (selectedRadioButton != null) {
             String selectedAnswer = selectedRadioButton.getText().toString();
-            Question currentQuestion = questions.get(currentQuestionIndex);
+            QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
 
             if (selectedAnswer.equals(currentQuestion.getCorrectAnswer())) {
                 score++;
@@ -129,5 +128,42 @@ public class UserTestPage extends AppCompatActivity {
         Intent intent = new Intent(this, LessonPage.class);
         startActivity(intent);
         finish();
+    }
+
+    // Inner class representing question details
+    private static class QuestionDetails {
+        private String questionText;
+        private String choiceA;
+        private String choiceB;
+        private String choiceC;
+        private String correctAnswer;
+
+        public QuestionDetails(String questionText, String choiceA, String choiceB, String choiceC, String correctAnswer) {
+            this.questionText = questionText;
+            this.choiceA = choiceA;
+            this.choiceB = choiceB;
+            this.choiceC = choiceC;
+            this.correctAnswer = correctAnswer;
+        }
+
+        public String getQuestionText() {
+            return questionText;
+        }
+
+        public String getChoiceA() {
+            return choiceA;
+        }
+
+        public String getChoiceB() {
+            return choiceB;
+        }
+
+        public String getChoiceC() {
+            return choiceC;
+        }
+
+        public String getCorrectAnswer() {
+            return correctAnswer;
+        }
     }
 }
