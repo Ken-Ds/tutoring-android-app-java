@@ -30,7 +30,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="25dp"
                     android:backgroundTint="@color/ourBlue"
-                    android:text="+ Add Test"
+                    android:text="+  Add Test"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="30sp"
@@ -57,7 +57,8 @@
                     android:text="LESSON 1"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteTest1"
@@ -90,7 +91,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="20dp"
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteTest2"
@@ -123,7 +125,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="20dp"
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteTest3"
@@ -156,7 +159,8 @@
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="20dp"
+                    android:background="@null"/>
 
                 <ImageButton
                     android:id="@+id/deleteSummativeTest"

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import androidx.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTableStatement);
 
 
-        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + "," + COLUMN_ACCOUNT_IMAGE + ") VALUES(1, 'admin@emicode.com', '12345', 'Admin', 'Male', '01/01/2000', '01/01/2023', '')";
+        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + "," + COLUMN_ACCOUNT_IMAGE + ") VALUES(1, 'admin@emicode.com', '12345', 'Admin', 'M', '01/01/2000', '01/01/2023', '')";
 
         db.execSQL(insertDefaultAdminStatement);
 
@@ -80,6 +81,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    public void updateAccount(String originalName, String newName, String newEmail, int newId){
+        AccountInfo accountUpdate = new AccountInfo();
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_ACCOUNT_NAME, newName);
+        cv.put(COLUMN_ACCOUNT_ID, newId);
+        cv.put(COLUMN_ACCOUNT_EMAIL, newEmail);
+
+        db.update(ACCOUNT_TABLE, cv," ACCOUNT_NAME = ? ", new String[]{originalName});
+    }
+
     public Boolean checkUserEmail(String email) {
         SQLiteDatabase db = this.getWritableDatabase();
         try (Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNT_TABLE + " WHERE " + COLUMN_ACCOUNT_EMAIL + " = ?", new String[]{email})) {
@@ -108,6 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<AccountInfo> accountInfos = new ArrayList<>();
 
         while (cursor.moveToNext()){
+
             AccountInfo account = new AccountInfo();
             account.setId(cursor.getInt(1));
             account.setEmail(cursor.getString(2));
@@ -116,6 +130,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             account.setSex(cursor.getString(5));
             account.setDateOfBirth(cursor.getString(6));
             account.setDateHired(cursor.getString(7));
+            byte[] imageData = cursor.getBlob(8);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(imageData,0,imageData.length);
+
+            account.setProfileImage(bitmap);
+
             accountInfos.add(account);
         }
         return accountInfos;
