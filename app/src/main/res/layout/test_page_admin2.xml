@@ -23,16 +23,20 @@
                 android:layout_alignParentTop="true"
                 android:background="#1e5180">
 
-                <TextView
-                    android:id="@+id/test"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <Button
+                    android:id="@+id/addTest"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/roboto_black"
-                    android:text="TEST"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/ourBlue"
+                    android:text="+ Add Test"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="65sp" />
+                    android:textSize="30sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="20dp" />
+
             </LinearLayout>
 
 
@@ -42,79 +46,32 @@
                 android:layout_alignParentTop="true"
                 android:background="#1e5180">
 
-                <ImageButton
-                    android:id="@+id/addTopicLesson1"
-                    android:layout_width="86dp"
-                    android:layout_height="73dp"
+                <Button
+                    android:id="@+id/editTest1"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/ourBlue"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/add_sign" />
-
-                <TextView
-                    android:id="@+id/textViewLesson1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/roboto_black"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#879AD1"
+                    android:fontFamily="@font/roboto_bold"
                     android:text="LESSON 1"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="50sp" />
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/deleteTest1"
+                    android:layout_width="60dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/ourBlue"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/delete_trashcan" />
+
             </LinearLayout>
-
-            <Button
-                android:id="@+id/L1T1"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Topic 1"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
-
-            <Button
-                android:id="@+id/L1T2"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                app:backgroundTint="#E9E9E9"
-                android:text="Topic 2"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border" />
-
-            <Button
-                android:id="@+id/L1T3"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:text="Topic 3"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
-
-            <Button
-                android:id="@+id/takeTestLesson1"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:text="Take Test"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:backgroundTint="#a8b4d8"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,80 +79,32 @@
                 android:layout_alignParentTop="true"
                 android:background="#1e5180">
 
-                <ImageButton
-                    android:id="@+id/addTopicLesson2"
-                    android:layout_width="86dp"
-                    android:layout_height="73dp"
+                <Button
+                    android:id="@+id/editTest2"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/ourBlue"
-                    app:srcCompat="@drawable/add_sign"
-                    android:scaleType="fitCenter"
-                    />
-
-                <TextView
-                    android:id="@+id/textViewLesson2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/roboto_black"
+                    android:backgroundTint="#879AD1"
                     android:text="LESSON 2"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="50sp" />
+                    android:textSize="30sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="20dp" />
+
+                <ImageButton
+                    android:id="@+id/deleteTest2"
+                    android:layout_width="60dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/ourBlue"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/delete_trashcan" />
+
             </LinearLayout>
-
-            <Button
-                android:id="@+id/L2T1"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Topic 1"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
-
-            <Button
-                android:id="@+id/L2T2"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:text="Topic 2"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
-
-            <Button
-                android:id="@+id/L2T3"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:text="Topic 3"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
-
-            <Button
-                android:id="@+id/takeTestLesson2"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="#a8b4d8"
-                android:text="Take Test"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -203,96 +112,72 @@
                 android:layout_alignParentTop="true"
                 android:background="#1e5180">
 
-                <ImageButton
-                    android:id="@+id/addTopicLesson3"
-                    android:layout_width="86dp"
-                    android:layout_height="73dp"
+                <Button
+                    android:id="@+id/editTest3"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/ourBlue"
-                    app:srcCompat="@drawable/add_sign"
-                    android:scaleType="fitCenter"
-                    />
-
-                <TextView
-                    android:id="@+id/textViewLesson3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/roboto_black"
+                    android:backgroundTint="#879AD1"
                     android:text="LESSON 3"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="50sp" />
+                    android:textSize="30sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="20dp" />
+
+                <ImageButton
+                    android:id="@+id/deleteTest3"
+                    android:layout_width="60dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/ourBlue"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/delete_trashcan" />
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/L3T1"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Topic 1"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:background="#1e5180">
 
-            <Button
-                android:id="@+id/L3T2"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:text="Topic 2"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
+                <Button
+                    android:id="@+id/editSummative"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="20dp"
+                    android:backgroundTint="#879AD1"
+                    android:text="SUMMATIVE"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginBottom="20dp" />
 
-            <Button
-                android:id="@+id/L3T3"
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:text="Topic 3"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="20sp"
-                android:background="@drawable/square_button_colored_border"
-                app:backgroundTint="#E9E9E9"/>
+                <ImageButton
+                    android:id="@+id/deleteSummativeTest"
+                    android:layout_width="60dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/ourBlue"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/delete_trashcan" />
 
-            <Button
-                android:id="@+id/takeTestLesson3"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#a8b4d8"
-                android:text="Take Test"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/summativeButton"
-                android:layout_width="320dp"
-                android:layout_height="65dp"
-                android:layout_marginStart="35dp"
-                android:backgroundTint="#879AD1"
-                android:text="SUMMATIVE"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_marginBottom="20dp"
-                />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="181dp"
+                android:text="TextView"
+                android:textColor="@color/ourBlue"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
