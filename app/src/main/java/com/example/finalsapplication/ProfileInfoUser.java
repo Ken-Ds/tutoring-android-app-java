@@ -26,8 +26,8 @@ public class ProfileInfoUser extends AppCompatActivity {
     private ScrollView scrollViewLessons3;
 
     private static final String AUTH_TOKEN_KEY = "auth_token";
-    DatabaseHelper db;
-    TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
+    private DatabaseHelper db;
+    private TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,9 +1,7 @@
-package com.example.finalsapplication;
+package com.example.finalsapplication.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,11 +11,11 @@ import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.finalsapplication.R;
 import com.example.finalsapplication.dataType.AccountInfo;
 import com.example.finalsapplication.dataType.DatabaseHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class UserManagement extends AppCompatActivity {
 
@@ -26,7 +24,7 @@ public class UserManagement extends AppCompatActivity {
 
     public AccountInfo editAccount;
 
-    private ImageButton backButton, addButton;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,6 @@ public class UserManagement extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list);
         searchView = (SearchView) findViewById(R.id.searchView);
         backButton = (ImageButton) findViewById(R.id.backButton);
-        addButton = (ImageButton) findViewById(R.id.addButton);
 
         searchView.setQueryHint("Search By Name");
 
@@ -72,11 +69,14 @@ public class UserManagement extends AppCompatActivity {
                         editAccount = accountInfos.get(position);
                     }
                 }
-                Intent i1 = new Intent(UserManagement.this, ProfileInfoAdmin.class);
-                i1.putExtra("name", editAccount.getName());
-                i1.putExtra("email", editAccount.getEmail());
-                i1.putExtra("id", String.valueOf(editAccount.getId()));
-                startActivity(i1);
+                Intent i= new Intent(UserManagement.this, ProfileInfoAdmin.class);
+                i.putExtra("name", editAccount.getName());
+                i.putExtra("email", editAccount.getEmail());
+                i.putExtra("id", String.valueOf(editAccount.getId()));
+                i.putExtra("sex",editAccount.getSex());
+                i.putExtra("dateOfBirth",editAccount.getDateOfBirth());
+                i.putExtra("dateHired",editAccount.getDateHired());
+                startActivity(i);
             }
         });
 
@@ -88,13 +88,6 @@ public class UserManagement extends AppCompatActivity {
             }
         });
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UserManagement.this, AddUser.class);
-                startActivity(i);
-            }
-        });
     }
 
 
