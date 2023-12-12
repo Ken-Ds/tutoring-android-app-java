@@ -18,12 +18,10 @@
         </menu>
     </item>
 
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/jumplesson1test"
             android:title="Take Test"/>
-    </group>
-
-
-
+        </group>
 </menu>

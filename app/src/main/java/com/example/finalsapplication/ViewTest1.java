@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ViewTest1 extends AppCompatActivity {
 
-    private List<Question> questions;
+    //private List<Question> questions;
     private int currentQuestionIndex = 0;
     private int score = 0;
     private int attempts = 0;
@@ -27,8 +27,9 @@ public class ViewTest1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_view1);
+        setContentView(R.layout.user_test_page);
 
+        /*
         final ImageButton imageButtonBackVT1 = findViewById(R.id.imageButtonBackVT1);
         final Button buttonSubmit = findViewById(R.id.buttonSubmitVT1);
 
@@ -118,6 +119,8 @@ public class ViewTest1 extends AppCompatActivity {
         finish();
     }
 
+ */
+    }
 
 }
 
