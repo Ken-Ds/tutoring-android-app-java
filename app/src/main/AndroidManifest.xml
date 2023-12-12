@@ -18,8 +18,8 @@
             android:name=".design"
             android:exported="false" />
         <activity
-            android:name=".UserLessonPage"
-            android:exported="false" />
+            android:name=".UserTestPage"
+            android:exported="true" />
         <activity
             android:name=".AdminAddLesson"
             android:exported="true" />
@@ -52,7 +52,7 @@
             android:exported="true" />
         <activity
             android:name=".LessonViewTest"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -88,16 +88,16 @@
             android:exported="true" />
         <activity
             android:name=".ViewLesson1Topic3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ViewLesson1Topic2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".UserMenu"
             android:exported="true" />
         <activity
             android:name=".ViewLesson1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ViewTest1"
             android:exported="true" />

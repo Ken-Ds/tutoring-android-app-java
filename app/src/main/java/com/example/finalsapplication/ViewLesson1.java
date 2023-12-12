@@ -48,5 +48,20 @@ public class ViewLesson1 extends AppCompatActivity {
             }
         });
 
+        imageButtonBackVL1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewLesson1.this, TestPage1.class);
+                startActivity(intent);
+            }
+        });
+
+        imageButtonNextVL1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewLesson1.this, ViewLesson1Topic2.class);
+                startActivity(intent);
+            }
+        });
     }
 }
