@@ -36,9 +36,9 @@ public class EditProfile extends AppCompatActivity {
         backButton = (ImageButton) findViewById(R.id.imageButtonBackVT1);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("Name");
-        String email = intent.getStringExtra("Email");
-        String id = intent.getStringExtra("Id");
+        String name = intent.getStringExtra("name");
+        String email = intent.getStringExtra("email");
+        String id = intent.getStringExtra("id");
         Log.d("name",name);
 
         getTextName.setText(name);
