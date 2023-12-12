@@ -2,5 +2,7 @@
     <string name="app_name">EmicodeAdmin</string>
     <string name="remarks_passed">Remarks : <i>Passed</i></string>
     <string name="remarks_failed">Remarks : <i>Failed</i></string>
+    <string name="open"> Open Navigation Drawer </string>
+    <string name="close"> Close Navigation Drawer</string>
 
 </resources>
