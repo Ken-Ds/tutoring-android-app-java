@@ -36,16 +36,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + ACCOUNT_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ACCOUNT_ID + " INT, " + COLUMN_ACCOUNT_EMAIL + " TEXT, " + COLUMN_ACCOUNT_PASSWORD + " TEXT, " + COLUMN_ACCOUNT_NAME + " TEXT, " + COLUMN_ACCOUNT_SEX + " TEXT, " + COLUMN_ACCOUNT_DATEOFBIRTH + " TEXT, " + COLUMN_ACCOUNT_DATEHIRED  +  " TEXT ," + COLUMN_ACCOUNT_IMAGE + " BLOB)";
+        String createTableStatement = "CREATE TABLE " + ACCOUNT_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ACCOUNT_ID + " INT, " + COLUMN_ACCOUNT_EMAIL + " TEXT, " + COLUMN_ACCOUNT_PASSWORD + " TEXT, " + COLUMN_ACCOUNT_NAME + " TEXT, " + COLUMN_ACCOUNT_SEX + " TEXT, " + COLUMN_ACCOUNT_DATEOFBIRTH + " TEXT, " + COLUMN_ACCOUNT_DATEHIRED  +  " TEXT)";
 
         db.execSQL(createTableStatement);
 
 
-        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + "," + COLUMN_ACCOUNT_IMAGE + ") VALUES(1, 'admin@emicode.com', '12345', 'Admin', 'M', '01/01/2000', '01/01/2023', '')";
+        String insertDefaultAdminStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX+ ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(1, 'admin@emicode.com', '12345', 'Admin', 'M', '01/01/2000', '01/01/2023')";
 
         db.execSQL(insertDefaultAdminStatement);
 
-        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ", " + COLUMN_ACCOUNT_IMAGE + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Emily Sotelo', 'F', '11/25/1993', '12/25/2023', '')";
+        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Emily Sotelo', 'F', '11/25/1993', '12/25/2023', '')";
 
         db.execSQL(insertDefaultUserStatement);
     }

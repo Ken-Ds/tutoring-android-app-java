@@ -26,9 +26,6 @@ public class EditProfile extends AppCompatActivity {
     private EditText getTextName, getTextEmail ,getTextEmployeeID;
     private Button save;
     private ImageButton backButton, profileEdit;
-    private static final int PICK_IMAGE_REQUEST = 99;
-    private Uri imagePath;
-    private Bitmap imageToStore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +38,6 @@ public class EditProfile extends AppCompatActivity {
         getTextEmployeeID = (EditText) findViewById(R.id.editTextEditEmployeeId);
         save = (Button) findViewById(R.id.buttonSubmitVT1);
         backButton = (ImageButton) findViewById(R.id.imageButtonBackVT1);
-        profileEdit = (ImageButton) findViewById(R.id.imageButtonProfileEdit);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
@@ -81,33 +77,6 @@ public class EditProfile extends AppCompatActivity {
             }
         });
 
-        profileEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent();
-                    intent.setType("image/*");
-                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(intent, PICK_IMAGE_REQUEST);
-
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        try {
-            super.onActivityResult(requestCode, resultCode, data);
-            if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
-                imagePath = data.getData();
-                imageToStore = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
-                profileEdit.setImageBitmap(imageToStore);
-            }
-
-        } catch (Exception e){
-            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
 }

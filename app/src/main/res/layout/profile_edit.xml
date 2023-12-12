@@ -17,33 +17,23 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp" />
 
-    <ImageButton
-        android:id="@+id/imageButtonProfileEdit"
-        android:layout_width="161dp"
-        android:layout_height="548dp"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="-100dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:scaleType="fitCenter"
-        android:src="@drawable/custom_profile_editor" />
-
     <TextView
         android:id="@+id/textViewEditName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name:"
-        android:textSize="25sp"
-        android:layout_marginTop="290dp"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="-20dp"/>
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="100dp"
+        android:text="Name:"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/editTextEditName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
+        android:layout_marginTop="105dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginTop="295dp"
         android:layout_marginRight="80dp"
         android:background="@drawable/square_button_colored_border" />
 
@@ -51,19 +41,19 @@
         android:id="@+id/textViewEditEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email:"
-        android:textSize="25sp"
-        android:layout_marginTop="340dp"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="-20dp"/>
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="200dp"
+        android:text="Email:"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/editTextEditEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
+        android:layout_marginTop="205dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginTop="347dp"
         android:layout_marginRight="80dp"
         android:background="@drawable/square_button_colored_border" />
 
@@ -73,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="-20dp"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="300dp"
         android:text="Employee ID:"
         android:textSize="17sp" />
 
@@ -82,8 +72,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginTop="397dp"
         android:layout_marginRight="80dp"
         android:background="@drawable/square_button_colored_border" />
 
