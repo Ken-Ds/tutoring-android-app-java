@@ -18,7 +18,7 @@
             android:name=".design"
             android:exported="false" />
         <activity
-            android:name=".UserLessonPage"
+            android:name=".UserTestPage"
             android:exported="false" />
         <activity
             android:name=".AdminAddLesson"
