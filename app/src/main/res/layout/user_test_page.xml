@@ -167,6 +167,34 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewQ1" />
 
+                <RadioButton
+                    android:id="@+id/radioButtonA2"
+                    android:layout_width="33dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="424dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RadioButton
+                    android:id="@+id/radioButtonB2"
+                    android:layout_width="33dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="324dp"
+                    android:layout_marginTop="424dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonC2"
+                    android:layout_width="33dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="368dp"
+                    android:layout_marginTop="424dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/textViewQ3"
                     android:layout_width="212dp"
