@@ -82,16 +82,33 @@
                 android:layout_alignParentBottom="true"
                 android:background="#a8b4d8">
 
-                <ImageButton
-                    android:id="@+id/imageButtonBackTP1"
-                    android:layout_width="76dp"
-                    android:layout_height="wrap_content"
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="175dp"
+                    android:layout_height="65dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:textStyle="bold"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/arrowleft" />
+                    android:text="MAIN DASHBOARD"
+                    android:fontFamily="@font/roboto_regular"
+                    android:backgroundTint="@color/black"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="175dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold"
+                    android:scaleType="fitCenter"
+                    android:text="RECORDS"
+                    android:fontFamily="@font/roboto_regular"
+                    android:backgroundTint="@color/black"/>
+
             </LinearLayout>
         </LinearLayout>
 </RelativeLayout>
