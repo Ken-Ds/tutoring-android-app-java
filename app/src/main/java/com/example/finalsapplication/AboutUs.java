@@ -27,7 +27,7 @@ public class AboutUs extends AppCompatActivity {
                 // Start the UserMenu activity
                 startActivity(intent);
 
-                // Finish the current activity (profile_information_admin_side)
+                // Finish the current activity
                 finish();
             }
         });

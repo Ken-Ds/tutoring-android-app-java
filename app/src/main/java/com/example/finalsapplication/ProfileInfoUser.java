@@ -130,7 +130,11 @@ public class ProfileInfoUser extends AppCompatActivity {
         // Calculate progress based on your scroll position and the ScrollView's content height
         int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
         int scrollY = scrollView.getScrollY();
-        int progress = (int) ((float) scrollY / maxScroll * 100);
+        int progress = 0;
+
+        if (maxScroll > 0) {
+            progress = (int) ((float) scrollY / maxScroll * 100);
+        }
 
         // Update progress bars
         progressBar.setProgress(progress);

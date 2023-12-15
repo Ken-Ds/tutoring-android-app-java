@@ -127,7 +127,7 @@
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/black"
-                    android:text="Lesson 1 Progress">
+                    android:text="Lesson 1: Topic 1">
 
                 </TextView>
 
@@ -160,7 +160,7 @@
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/black"
-                    android:text="Lesson 2 Progress">
+                    android:text="Lesson 1: Topic 2">
 
                 </TextView>
 
@@ -192,7 +192,7 @@
                     android:textSize="30sp"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/black"
-                    android:text="Lesson 3 Progress">
+                    android:text="Lesson 1: Topic 3">
 
                 </TextView>
 
@@ -222,6 +222,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="100dp"
                     android:fontFamily="@font/roboto_regular"
                     android:textColor="@color/black"
                     android:padding="8dp"
