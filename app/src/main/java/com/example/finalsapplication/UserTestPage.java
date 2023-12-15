@@ -51,10 +51,15 @@ public class UserTestPage extends AppCompatActivity {
     private List<QuestionDetails> generateQuestions() {
         List<QuestionDetails> allQuestions = new ArrayList<>();
         // Add your questions here
-        allQuestions.add(new QuestionDetails("Lorem ipsum dolor sit amet?", "A", "B", "C", "A"));
+        allQuestions.add(new QuestionDetails("1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum blandit tincidunt.", "A", "B", "C", "A"));
 
-        Collections.shuffle(allQuestions);
-        return allQuestions.subList(0, 5);
+        if (allQuestions.size() >= 5) {
+            Collections.shuffle(allQuestions);
+            return allQuestions.subList(0, 5);
+        } else {
+            // Handle the case when there are not enough questions
+            return allQuestions;
+        }
     }
 
     private void showQuestions() {
