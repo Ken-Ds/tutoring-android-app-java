@@ -140,10 +140,10 @@ public class ProfileInfoUser extends AppCompatActivity {
                 Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
 
                 // Update progress bar
-                progressBarLesson1.setProgress(progress);
+                progressBarLesson2.setProgress(progress);
 
                 // Remove the listener to avoid multiple calls
-                scrollViewLessons1.getViewTreeObserver().removeOnPreDrawListener(this);
+                scrollViewLessons2.getViewTreeObserver().removeOnPreDrawListener(this);
 
                 return true;
             }
