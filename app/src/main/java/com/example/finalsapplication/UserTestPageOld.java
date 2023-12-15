@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class UserTestPageOld extends AppCompatActivity {
-    private List<UserTestPage.QuestionDetails> questions;
+    private List<QuestionDetails> questions;
     private int currentQuestionIndex = 0;
     private int score = 0;
     private int attempts = 0;
@@ -48,43 +48,45 @@ public class UserTestPageOld extends AppCompatActivity {
         });
     }
 
-    private List<UserTestPage.QuestionDetails> generateQuestions() {
-        List<UserTestPage.QuestionDetails> allQuestions = new ArrayList<>();
-        // Add your questions here
-        allQuestions.add(new UserTestPage.QuestionDetails("Lorem ipsum dolor sit amet?", "A", "B", "C", "A"));
+    private List<UserTestPageOld.QuestionDetails> generateQuestions() {
+        List<UserTestPageOld.QuestionDetails> allQuestions = new ArrayList<>();
+
+        allQuestions.add(new UserTestPageOld.QuestionDetails("Lorem ipsum dolor sit amet?", "A", "B", "C", "A"));
 
         Collections.shuffle(allQuestions);
-        return allQuestions.subList(0, 5);
+        return allQuestions.subList(0, Math.min(5, allQuestions.size()));
     }
 
     private void showQuestions() {
+        if (currentQuestionIndex < questions.size()) {
+            QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
+            TextView questionTextView = findViewById(R.id.textViewQ1);
+            questionTextView.setText(currentQuestion.getQuestionText());
 
+            RadioButton choiceARadioButton = findViewById(R.id.radioButtonA1);
+            choiceARadioButton.setText(currentQuestion.getChoiceA());
 
-        UserTestPage.QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
+            RadioButton choiceBRadioButton = findViewById(R.id.radioButtonB1);
+            choiceBRadioButton.setText(currentQuestion.getChoiceB());
 
-        TextView questionTextView = findViewById(R.id.textViewQ1);
-        questionTextView.setText(currentQuestion.getQuestionText());
-
-        RadioButton choiceARadioButton = findViewById(R.id.radioButtonA1);
-        choiceARadioButton.setText(currentQuestion.getChoiceA());
-
-        RadioButton choiceBRadioButton = findViewById(R.id.radioButtonB1);
-        choiceBRadioButton.setText(currentQuestion.getChoiceB());
-
-        RadioButton choiceCRadioButton = findViewById(R.id.radioButtonC1);
-        choiceCRadioButton.setText(currentQuestion.getChoiceC());
-
-
+            RadioButton choiceCRadioButton = findViewById(R.id.radioButtonC1);
+            choiceCRadioButton.setText(currentQuestion.getChoiceC());
+        } else {
+            Button submitButton = findViewById(R.id.buttonSubmitVT1);
+            submitButton.setEnabled(false);
+            Toast.makeText(this, "No more questions available. ", Toast.LENGTH_SHORT).show();
+        }
     }
+
 
     private void checkAnswer() {
         RadioGroup radioGroup = findViewById(R.id.radio_group1);
         int selectedId = radioGroup.getCheckedRadioButtonId();
-        RadioButton selectedRadioButton = findViewById(selectedId);
-
-        if (selectedRadioButton != null) {
+        if (selectedId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedId);
             String selectedAnswer = selectedRadioButton.getText().toString();
-            UserTestPage.QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
+
+            QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
 
             if (selectedAnswer.equals(currentQuestion.getCorrectAnswer())) {
                 score++;
