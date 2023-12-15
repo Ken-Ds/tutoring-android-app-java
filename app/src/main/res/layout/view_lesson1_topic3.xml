@@ -68,13 +68,15 @@
                 android:text="TOPIC 3 : Oratrice mechanique d'analyse cardinale estelle"
                 android:fontFamily="@font/roboto_light"
                 android:textSize="35sp"
+                android:textColor="@color/black"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-----------------------------------------------------------------------------------------------------------"
+                android:textColor="@color/black"
+                android:text="-----------------------------------------------------------------------------"
                 />
 
             <TextView
@@ -84,6 +86,7 @@
                 android:layout_below="@+id/textViewLesson1"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
+                android:textColor="@color/black"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/roboto_light"
                 android:justificationMode="inter_word"

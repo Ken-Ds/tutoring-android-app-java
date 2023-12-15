@@ -66,6 +66,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="TOPIC 2 : Spina de Rosula"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_light"
                 android:textSize="35sp"
                 android:textStyle="bold"/>
@@ -74,7 +75,8 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-----------------------------------------------------------------------------------------------------------"
+                android:textColor="@color/black"
+                android:text="-----------------------------------------------------------------------------"
                 />
 
             <TextView
@@ -86,6 +88,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/roboto_light"
+                android:textColor="@color/black"
                 android:justificationMode="inter_word"
                 android:text=" Ut bibendum blandit tincidunt. In maximus, turpis placerat vestibulum lobortis, purus sapien venenatis risus. Curabitur vulputate suscipit arcu eget bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. , eu vehicula felis sapien a ligula. Nulla in aliquet urna, ac laoreet tellus. Maecenas eu commodo magna. In hac habitasse platea dictumst. Praesent porttitor est gravida, viverra augue et, tristique odio. Sed lacinia mi ut nisi tempus, ac blandit nunc blandit. Sed blandit ultrices efficitur. Integer eleifend cursus sapien, non lobortis nisi vestibulum ac. Aenean et sem porta turpis dapibus tempor in in nibh. Suspendisse laoreet purus nec est semper, id mattis mauris volutpat."
                 android:textSize="40sp" />
