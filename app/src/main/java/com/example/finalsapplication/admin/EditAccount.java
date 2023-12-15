@@ -42,7 +42,7 @@ public class EditAccount extends AppCompatActivity {
         ArrayList<AccountInfo> accountInfos = createArray();
 
         ArrayList list1 = new ArrayList<>();
-        for (int x =1; x< accountInfos.size(); x++){
+        for (int x =0; x< accountInfos.size(); x++){
             list1.add("Name: "+accountInfos.get(x).getName() + "\t\t" + "ID: "+ accountInfos.get(x).getId());
         }
         ArrayAdapter adapter = new ArrayAdapter(this,R.layout.list_layout,R.id.text,list1);
@@ -66,7 +66,7 @@ public class EditAccount extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 for (int x =0; x < accountInfos.size();x++){
                     if(position==x){
-                        editAccount = accountInfos.get(position++);
+                        editAccount = accountInfos.get(position);
                     }
                 }
                 Intent i1 = new Intent(EditAccount.this, EditProfile.class);

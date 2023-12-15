@@ -57,7 +57,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         String dateOfBirth = intent.getStringExtra("dateOfBirth");
         String dateHired = intent.getStringExtra("dateHired");
 
-        if (sex == "F"){
+        if ("F".equals(sex)) {
             pfp.setImageResource(R.drawable.female_icon);
         } else {
             pfp.setImageResource(R.drawable.male_icon);

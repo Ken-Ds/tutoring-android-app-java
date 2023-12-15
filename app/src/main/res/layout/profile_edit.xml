@@ -37,6 +37,9 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:textColor="@color/black"
+        android:paddingTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="10dp"
         android:background="@drawable/square_button_colored_border" />
 
     <TextView
@@ -59,6 +62,9 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:textColor="@color/black"
+        android:paddingTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="10dp"
         android:background="@drawable/square_button_colored_border" />
 
     <TextView
@@ -81,6 +87,9 @@
         android:layout_marginEnd="80dp"
         android:textColor="@color/black"
         android:layout_marginRight="80dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="10dp"
         android:background="@drawable/square_button_colored_border" />
 
 

@@ -51,7 +51,7 @@ public class ProfileInfoUser extends AppCompatActivity {
         String emailCheck = retrieveAuthToken();
         AccountInfo accDetails = db.getUserByEmail(emailCheck);
 
-        if (accDetails.getSex() == "F" ) {
+        if ("F".equals(accDetails.getSex())) {
             pfp.setImageResource(R.drawable.female_icon);
         } else {
             pfp.setImageResource(R.drawable.male_icon);
