@@ -236,40 +236,38 @@
 
             </LinearLayout>
 
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dip"
-
-            android:layout_alignParentBottom="true"
-            android:background="#a8b4d8">
-
-            <ImageButton
-                android:id="@+id/imageButtonBackVT1"
-                android:layout_width="76dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
-                android:background="?android:attr/selectableItemBackground"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="20dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/arrowleft" />
-
-            <Button
-                android:id="@+id/buttonSubmitVT1"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="170dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/rounded_button"
-                android:fontFamily="@font/roboto_light"
-                android:scaleType="fitCenter"
-                android:text="Save"
-                android:textColor="@color/white"
-                app:backgroundTint="#1e5180" />
-        </LinearLayout>
          </LinearLayout>
     </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+
+        android:layout_alignParentBottom="true"
+        android:background="#a8b4d8">
+
+        <ImageButton
+            android:id="@+id/imageButtonBackVT1"
+            android:layout_width="76dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrowleft" />
+
+        <Button
+            android:id="@+id/buttonSubmitVT1"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/roboto_light"
+            android:scaleType="fitCenter"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:backgroundTint="#1e5180" />
+    </LinearLayout>
 </RelativeLayout>

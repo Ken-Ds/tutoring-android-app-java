@@ -21,10 +21,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ACCOUNT_SEX = "ACCOUNT_SEX";
     public static final String COLUMN_ACCOUNT_DATEOFBIRTH = "ACCOUNT_DATEOFBIRTH";
     public static final String COLUMN_ACCOUNT_DATEHIRED = "ACCOUNT_DATEHIRED";
-    public static final String COLUMN_ACCOUNT_IMAGE = "ACCOUNT_IMAGE";
-
-    private ByteArrayOutputStream byteArrayOutputStream;
-    private byte[] imageInBytes;
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, "account.db", null, 1);
@@ -105,23 +101,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public ArrayList<AccountInfo> fetchAccount(){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(" SELECT * FROM " + ACCOUNT_TABLE, null);
+        String[] projection = {
+                COLUMN_ACCOUNT_ID,
+                COLUMN_ACCOUNT_EMAIL,
+                COLUMN_ACCOUNT_NAME,
+                COLUMN_ACCOUNT_SEX,
+                COLUMN_ACCOUNT_DATEOFBIRTH,
+                COLUMN_ACCOUNT_DATEHIRED
+        };
+        Cursor cursor = db.query(ACCOUNT_TABLE, projection, null, null, null, null, null);
 
         ArrayList<AccountInfo> accountInfos = new ArrayList<>();
 
-        while (cursor.moveToNext()){
-
+        while (cursor.moveToNext()) {
             AccountInfo account = new AccountInfo();
-            account.setId(cursor.getInt(1));
-            account.setEmail(cursor.getString(2));
-            account.setPassword(cursor.getString(3));
-            account.setName(cursor.getString(4));
-            account.setSex(cursor.getString(5));
-            account.setDateOfBirth(cursor.getString(6));
-            account.setDateHired(cursor.getString(7));
+            account.setId(cursor.getInt(0));
+            account.setEmail(cursor.getString(1));
+            account.setName(cursor.getString(2));
+            account.setSex(cursor.getString(3));
+            account.setDateOfBirth(cursor.getString(4));
+            account.setDateHired(cursor.getString(5));
 
             accountInfos.add(account);
         }
+
+        cursor.close();
         return accountInfos;
     }
 

@@ -26,7 +26,7 @@ public class LessonPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_page);
+        setContentView(R.layout.lessons_page);
 
         updateButtonState();
 
@@ -49,9 +49,6 @@ public class LessonPage extends AppCompatActivity {
         Button L3T1 = findViewById(R.id.L3T1);
         Button L3T2 = findViewById(R.id.L3T2);
         Button L3T3 = findViewById(R.id.L3T3);
-        Button takeTestLesson1 = findViewById(R.id.takeTestLesson1);
-        Button takeTestLesson2 = findViewById(R.id.takeTestLesson2);
-        Button takeTestLesson3 = findViewById(R.id.takeTestLesson3);
         Button summativeButton = findViewById(R.id.summativeButton);
 
         L1T1.setEnabled(true);
@@ -63,9 +60,6 @@ public class LessonPage extends AppCompatActivity {
         L3T1.setEnabled(false);
         L3T2.setEnabled(false);
         L3T3.setEnabled(false);
-        takeTestLesson1.setEnabled(true);
-        takeTestLesson2.setEnabled(false);
-        takeTestLesson3.setEnabled(false);
         summativeButton.setEnabled(true);
 
         if (currentLesson == 1 && currentTopic == 1) {
@@ -80,19 +74,15 @@ public class LessonPage extends AppCompatActivity {
 
             setButtonClickListener(L1T2, 1, 2, lesson1Topic1Completed);
             setButtonClickListener(L1T3, 1, 3, lesson1Topic2Completed);
-            setButtonClickListener(takeTestLesson1, 1, 3, lesson1Topic3Completed);
         }
 
         setButtonClickListener(L2T1, 2, 1, lesson2Topic1Completed);
         setButtonClickListener(L2T2, 2, 2, lesson2Topic2Completed);
         setButtonClickListener(L2T3, 2, 3, lesson2Topic3Completed);
-        setButtonClickListener(takeTestLesson2, 2, 3, lesson2Topic3Completed);
 
         setButtonClickListener(L3T1, 3, 1, lesson3Topic1Completed);
         setButtonClickListener(L3T2, 3, 2, lesson3Topic2Completed);
         setButtonClickListener(L3T3, 3, 3, lesson3Topic3Completed);
-        setButtonClickListener(takeTestLesson3, 3, 3, lesson3Topic3Completed);
-
         summativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

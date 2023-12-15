@@ -167,35 +167,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewQ1" />
 
-                <RadioGroup
-                    android:id="@+id/radio_group1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioButtonA1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="70dp"
-                        />
-
-
-                    <RadioButton
-                        android:id="@+id/radioButtonB1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="-8dp"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radioButtonC1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="-10dp"
-                        />
-                </RadioGroup>
-
                 <TextView
                     android:id="@+id/textViewQ3"
                     android:layout_width="212dp"

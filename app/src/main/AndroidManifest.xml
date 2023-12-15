@@ -20,44 +20,41 @@
             android:name=".UserTestPageOld"
             android:exported="true" />
         <activity
-            android:name=".design"
-            android:exported="false" />
-        <activity
             android:name=".UserTestPage"
-            android:exported="true" />
-        <activity
-            android:name=".AdminAddLesson"
             android:exported="true" />
         <activity
             android:name=".AboutUs"
             android:exported="true" />
         <activity
-            android:name=".AddUser"
+            android:name=".admin.AddUser"
             android:exported="true" />
         <activity
-            android:name=".AdminMenu"
+            android:name=".admin.AdminMenu"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Delete"
+            android:exported="false" />
+        <activity
+            android:name=".admin.DeleteAccount"
+            android:exported="false" />
+        <activity
+            android:name=".admin.EditAccount"
+            android:exported="false" />
+        <activity
+            android:name=".admin.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".admin.ProfileInfoAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".admin.UserManagement"
+            android:exported="false" />
+        <activity
+            android:name=".admin.ViewAccount"
             android:exported="false" />
         <activity
             android:name=".AdminRecordsPage1"
             android:exported="false" />
-        <activity
-            android:name=".EditProfile"
-            android:exported="true" />
-        <activity
-            android:name=".EditTest"
-            android:exported="false" />
-        <activity
-            android:name=".Header"
-            android:exported="false" />
-        <activity
-            android:name=".LessonsPage1"
-            android:exported="true" />
-        <activity
-            android:name=".LessonsPageAdmin2"
-            android:exported="true" />
-        <activity
-            android:name=".LessonViewTest"
-            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -67,9 +64,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ProfileInfoAdmin"
-            android:exported="false" />
         <activity
             android:name=".ProfileInfoUser"
             android:exported="true" />
@@ -84,12 +78,6 @@
             android:exported="true" />
         <activity
             android:name=".LessonPage"
-            android:exported="true" />
-        <activity
-            android:name=".TestPageAdmin2"
-            android:exported="false" />
-        <activity
-            android:name=".UserManagement"
             android:exported="true" />
         <activity
             android:name=".ViewLesson1Topic3"
