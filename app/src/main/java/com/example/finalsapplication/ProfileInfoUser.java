@@ -109,79 +109,25 @@ public class ProfileInfoUser extends AppCompatActivity {
         View layout3 = getLayoutInflater().inflate(R.layout.view_lesson1_topic3, null);
         scrollViewLessons3 = layout3.findViewById(R.id.LessonView3ScrollView);
 
-        // Set OnScrollChangeListeners for the ScrollViews
-        scrollViewLessons1.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-            @Override
-            public boolean onPreDraw() {
-                int maxScroll = scrollViewLessons1.getChildAt(0).getHeight() - scrollViewLessons1.getHeight();
-                int scrollY = scrollViewLessons1.getScrollY();
-                int progress = 0;
+        setScrollChangeListener(scrollViewLessons1, progressBarLesson1);
+        setScrollChangeListener(scrollViewLessons2, progressBarLesson2);
+        setScrollChangeListener(scrollViewLessons3, progressBarLesson3);
 
-                if (maxScroll > 0) {
-                    progress = (int) ((float) scrollY / maxScroll * 100);
-                }
+    }
 
-                // Log progress for debugging
-                Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
+    private void setScrollChangeListener(ScrollView scrollView, ProgressBar progressBar) {
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(() -> {
+            int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
+            int scrollY = scrollView.getScrollY();
+            int progress = 0;
 
-                // Update progress bar
-                progressBarLesson1.setProgress(progress);
-
-                // Remove the listener to avoid multiple calls
-                scrollViewLessons1.getViewTreeObserver().removeOnPreDrawListener(this);
-
-                return true;
+            if (maxScroll > 0) {
+                progress = (int) ((float) scrollY / maxScroll * 100);
             }
+
+            // Update progress bar
+            progressBar.setProgress(progress);
         });
-
-        scrollViewLessons2.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-            @Override
-            public boolean onPreDraw() {
-                int maxScroll = scrollViewLessons2.getChildAt(0).getHeight() - scrollViewLessons2.getHeight();
-                int scrollY = scrollViewLessons2.getScrollY();
-                int progress = 0;
-
-                if (maxScroll > 0) {
-                    progress = (int) ((float) scrollY / maxScroll * 100);
-                }
-
-                // Log progress for debugging
-                Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
-
-                // Update progress bar
-                progressBarLesson2.setProgress(progress);
-
-                // Remove the listener to avoid multiple calls
-                scrollViewLessons2.getViewTreeObserver().removeOnPreDrawListener(this);
-
-                return true;
-            }
-        });
-
-        scrollViewLessons3.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-            @Override
-            public boolean onPreDraw() {
-                int maxScroll = scrollViewLessons3.getChildAt(0).getHeight() - scrollViewLessons3.getHeight();
-                int scrollY = scrollViewLessons3.getScrollY();
-                int progress = 0;
-
-                if (maxScroll > 0) {
-                    progress = (int) ((float) scrollY / maxScroll * 100);
-                }
-
-                // Log progress for debugging
-                Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
-
-                // Update progress bar
-                progressBarLesson3.setProgress(progress);
-
-                // Remove the listener to avoid multiple calls
-                scrollViewLessons3.getViewTreeObserver().removeOnPreDrawListener(this);
-
-                return true;
-            }
-        });
-
     }
 
     private String retrieveAuthToken() {

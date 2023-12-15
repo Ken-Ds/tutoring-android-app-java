@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="16dp">
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="30dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -323,6 +323,8 @@
                     android:background="#a8b4d8"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewQ5"
                     app:layout_constraintVertical_bias="1.0">
 
@@ -347,7 +349,8 @@
                         android:layout_marginStart="-360dp"
                         android:background="?android:attr/selectableItemBackground"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/arrowleft" />
+                        android:src="@drawable/arrowleft"
+                        android:contentDescription="Back Button" />
 
                 </LinearLayout>
 
