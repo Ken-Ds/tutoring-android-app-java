@@ -82,7 +82,7 @@ public class ViewLesson1Topic3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ViewLesson1Topic3.this, ViewTest1.class);
+                Intent i = new Intent(ViewLesson1Topic3.this, ProfileInfoUser.class);
                 startActivity(i);
             }
         });
