@@ -61,8 +61,23 @@ public class ViewLesson1Topic2 extends AppCompatActivity {
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
-                } else if (itemId == R.id.jumplesson1test) {
-                    i = new Intent(ViewLesson1Topic2.this, UserTestPage.class);
+                } else if (itemId == R.id.backToMenu) {
+                    i = new Intent(ViewLesson1Topic2.this, UserMenu.class);
+                    startActivity(i);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
+                } else if (itemId == R.id.backToLessons) {
+                    i = new Intent(ViewLesson1Topic2.this, LessonPage.class);
+                    startActivity(i);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
+                } else if (itemId == R.id.toProfile) {
+                    i = new Intent(ViewLesson1Topic2.this, ProfileInfoUser.class);
+                    startActivity(i);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
+                } else if (itemId == R.id.toAbout) {
+                    i = new Intent(ViewLesson1Topic2.this, AboutUs.class);
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;

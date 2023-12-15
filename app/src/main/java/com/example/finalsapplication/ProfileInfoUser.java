@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class ProfileInfoUser extends AppCompatActivity {
     private static final String AUTH_TOKEN_KEY = "auth_token";
     private DatabaseHelper db;
     private TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
+    private ImageView pfp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +45,17 @@ public class ProfileInfoUser extends AppCompatActivity {
         sexTV = findViewById(R.id.user_sex);
         birthTV = findViewById(R.id.date_of_birth);
         hiredTV = findViewById(R.id.date_hired);
+        pfp = findViewById(R.id.profile_pic);
         db = new DatabaseHelper(this);
 
         String emailCheck = retrieveAuthToken();
         AccountInfo accDetails = db.getUserByEmail(emailCheck);
+
+        if (accDetails.getSex() == "F" ) {
+            pfp.setImageResource(R.drawable.female_icon);
+        } else {
+            pfp.setImageResource(R.drawable.male_icon);
+        }
 
         nameTV.setText("Name: " + accDetails.getName());
         emailTV.setText("User Email: " + accDetails.getEmail());

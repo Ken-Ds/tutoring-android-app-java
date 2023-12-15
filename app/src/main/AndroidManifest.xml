@@ -27,6 +27,7 @@
             android:exported="true" />
         <activity
             android:name=".admin.AddUser"
+            android:windowSoftInputMode="adjustResize"
             android:exported="true" />
         <activity
             android:name=".admin.AdminMenu"

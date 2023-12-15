@@ -18,10 +18,24 @@
         </menu>
     </item>
 
+    <item android:title="Navigation">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/backToMenu"
+                    android:title="Back to Main Menu"
+                    />
+                <item
+                    android:id="@+id/backToLessons"
+                    android:title="Lessons Page"/>
+                <item
+                    android:id="@+id/toProfile"
+                    android:title="Profile"/>
+                <item
+                    android:id="@+id/toAbout"
+                    android:title="About Us"/>
+            </group>
+        </menu>
+    </item>
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/jumplesson1test"
-            android:title="Take Test"/>
-        </group>
 </menu>

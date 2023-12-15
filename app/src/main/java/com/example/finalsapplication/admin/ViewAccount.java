@@ -63,9 +63,9 @@ public class ViewAccount extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                for (int x =0; x < accountInfos.size();x++){
+                for (int x = 0; x < accountInfos.size();x++){
                     if(position==x){
-                        editAccount = accountInfos.get(position);
+                        editAccount = accountInfos.get(position++);
                     }
                 }
                 Intent i= new Intent(ViewAccount.this, ProfileInfoAdmin.class);

@@ -6,11 +6,16 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.finalsapplication.admin.AdminMenu;
 
 
 public class UserMenu extends AppCompatActivity implements View.OnClickListener {
 
     private CardView lessons, profile, records, about;
+    private ImageButton logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,11 +25,21 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
         records = (CardView) findViewById(R.id.toRecords);
         profile = (CardView) findViewById(R.id.toProfile);
         about = (CardView) findViewById(R.id.toAbout);
+        logout = findViewById(R.id.btnLogout);
 
         lessons.setOnClickListener(this);
         records.setOnClickListener(this);
         profile.setOnClickListener(this);
         about.setOnClickListener(this);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(UserMenu.this, MainActivity.class);
+                startActivity(i);
+                Toast.makeText(UserMenu.this, "Successfully logged out", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

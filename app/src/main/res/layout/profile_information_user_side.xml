@@ -24,10 +24,11 @@
                 android:layout_marginTop="50dp">
 
                 <ImageView
-                    android:layout_width="365dp"
-                    android:layout_height="165dp"
-                    android:src="@drawable/profile_icon"
-                    android:layout_gravity="center"/>
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/female_icon"
+                />
 
                 <TextView
                     android:id="@+id/user_name"

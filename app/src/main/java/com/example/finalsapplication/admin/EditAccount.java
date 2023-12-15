@@ -66,7 +66,7 @@ public class EditAccount extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 for (int x =0; x < accountInfos.size();x++){
                     if(position==x){
-                        editAccount = accountInfos.get(position);
+                        editAccount = accountInfos.get(position++);
                     }
                 }
                 Intent i1 = new Intent(EditAccount.this, EditProfile.class);
