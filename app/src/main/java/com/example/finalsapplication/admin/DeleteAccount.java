@@ -40,7 +40,7 @@ public class DeleteAccount extends AppCompatActivity {
         ArrayList<AccountInfo> accountInfos = createArray();
 
         ArrayList list1 = new ArrayList<>();
-        for (int x =0; x< accountInfos.size(); x++){
+        for (int x =1; x< accountInfos.size(); x++){
             list1.add("Name: "+accountInfos.get(x).getName() + "\t\t" + "ID: "+ accountInfos.get(x).getId());
         }
         ArrayAdapter adapter = new ArrayAdapter(this,R.layout.list_layout,R.id.text,list1);

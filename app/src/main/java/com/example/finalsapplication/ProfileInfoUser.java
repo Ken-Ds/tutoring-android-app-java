@@ -3,6 +3,7 @@ package com.example.finalsapplication;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
@@ -100,44 +101,78 @@ public class ProfileInfoUser extends AppCompatActivity {
         scrollViewLessons3 = layout3.findViewById(R.id.LessonView3ScrollView);
 
         // Set OnScrollChangeListeners for the ScrollViews
-        scrollViewLessons1.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+        scrollViewLessons1.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
-            public void onScrollChanged() {
-                // Update progress based on scroll position for ProgressBar1
-                updateProgress(progressBarLesson1, scrollViewLessons1);
+            public boolean onPreDraw() {
+                int maxScroll = scrollViewLessons1.getChildAt(0).getHeight() - scrollViewLessons1.getHeight();
+                int scrollY = scrollViewLessons1.getScrollY();
+                int progress = 0;
+
+                if (maxScroll > 0) {
+                    progress = (int) ((float) scrollY / maxScroll * 100);
+                }
+
+                // Log progress for debugging
+                Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
+
+                // Update progress bar
+                progressBarLesson1.setProgress(progress);
+
+                // Remove the listener to avoid multiple calls
+                scrollViewLessons1.getViewTreeObserver().removeOnPreDrawListener(this);
+
+                return true;
             }
         });
 
-        scrollViewLessons2.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+        scrollViewLessons2.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
-            public void onScrollChanged() {
-                // Update progress based on scroll position for ProgressBar2
-                updateProgress(progressBarLesson2, scrollViewLessons2);
+            public boolean onPreDraw() {
+                int maxScroll = scrollViewLessons2.getChildAt(0).getHeight() - scrollViewLessons2.getHeight();
+                int scrollY = scrollViewLessons2.getScrollY();
+                int progress = 0;
+
+                if (maxScroll > 0) {
+                    progress = (int) ((float) scrollY / maxScroll * 100);
+                }
+
+                // Log progress for debugging
+                Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
+
+                // Update progress bar
+                progressBarLesson1.setProgress(progress);
+
+                // Remove the listener to avoid multiple calls
+                scrollViewLessons1.getViewTreeObserver().removeOnPreDrawListener(this);
+
+                return true;
             }
         });
 
-        scrollViewLessons3.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+        scrollViewLessons3.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
-            public void onScrollChanged() {
-                // Update progress based on scroll position for ProgressBar3
-                updateProgress(progressBarLesson3, scrollViewLessons3);
+            public boolean onPreDraw() {
+                int maxScroll = scrollViewLessons3.getChildAt(0).getHeight() - scrollViewLessons3.getHeight();
+                int scrollY = scrollViewLessons3.getScrollY();
+                int progress = 0;
+
+                if (maxScroll > 0) {
+                    progress = (int) ((float) scrollY / maxScroll * 100);
+                }
+
+                // Log progress for debugging
+                Log.d("ProgressDebug", "ScrollY: " + scrollY + ", MaxScroll: " + maxScroll + ", Progress: " + progress);
+
+                // Update progress bar
+                progressBarLesson3.setProgress(progress);
+
+                // Remove the listener to avoid multiple calls
+                scrollViewLessons3.getViewTreeObserver().removeOnPreDrawListener(this);
+
+                return true;
             }
         });
-    }
 
-    // Method to update progress based on scroll position
-    private void updateProgress(ProgressBar progressBar, ScrollView scrollView) {
-        // Calculate progress based on your scroll position and the ScrollView's content height
-        int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
-        int scrollY = scrollView.getScrollY();
-        int progress = 0;
-
-        if (maxScroll > 0) {
-            progress = (int) ((float) scrollY / maxScroll * 100);
-        }
-
-        // Update progress bars
-        progressBar.setProgress(progress);
     }
 
     private String retrieveAuthToken() {
