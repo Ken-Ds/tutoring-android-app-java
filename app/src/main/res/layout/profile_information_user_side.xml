@@ -137,7 +137,6 @@
                     android:layout_width="313dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
-                    android:indeterminate="false"
                     android:max="100"
                     android:progressTint="#1e5180"
                     >
@@ -167,7 +166,6 @@
                 <ProgressBar
                     android:id="@+id/progressBar_lesson2"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:indeterminate="false"
                     android:layout_width="313dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="50dp"
@@ -200,7 +198,6 @@
                     android:id="@+id/progressBar_lesson3"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_marginBottom="40dp"
-                    android:indeterminate="false"
                     android:layout_width="313dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="50dp"
