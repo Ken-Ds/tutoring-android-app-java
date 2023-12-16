@@ -34,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(createTableStatement);
 
-        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Emily Sotelo', 'F', '11/25/1993', '12/25/2023')";
+        String insertDefaultUserStatement = "INSERT INTO " + ACCOUNT_TABLE + "(" + COLUMN_ACCOUNT_ID + ", " + COLUMN_ACCOUNT_EMAIL + ", " + COLUMN_ACCOUNT_PASSWORD + ", " + COLUMN_ACCOUNT_NAME + ", " + COLUMN_ACCOUNT_SEX + ", " + COLUMN_ACCOUNT_DATEOFBIRTH + ", " + COLUMN_ACCOUNT_DATEHIRED + "," + COLUMN_ACCOUNT_SCORE + ") VALUES(2230908, 'emilysotelo@emicode.com', '12345', 'Emily Sotelo', 'F', '11/25/1993', '12/25/2023','0')";
 
         db.execSQL(insertDefaultUserStatement);
     }
@@ -105,7 +105,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_ACCOUNT_NAME,
                 COLUMN_ACCOUNT_SEX,
                 COLUMN_ACCOUNT_DATEOFBIRTH,
-                COLUMN_ACCOUNT_DATEHIRED
+                COLUMN_ACCOUNT_DATEHIRED,
+                COLUMN_ACCOUNT_SCORE
         };
         Cursor cursor = db.query(ACCOUNT_TABLE, projection, null, null, null, null, null);
 
@@ -119,7 +120,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             account.setSex(cursor.getString(3));
             account.setDateOfBirth(cursor.getString(4));
             account.setDateHired(cursor.getString(5));
-            account.setScore(6);
+            account.setScore(Integer.parseInt(cursor.getString(6)));
             accountInfos.add(account);
         }
 

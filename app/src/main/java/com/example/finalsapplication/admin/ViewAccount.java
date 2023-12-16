@@ -29,14 +29,11 @@ public class ViewAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_account);
-
         listView = (ListView) findViewById(R.id.list);
         searchView = (SearchView) findViewById(R.id.searchView);
         backButton = (ImageButton) findViewById(R.id.backButton);
 
         searchView.setQueryHint("Search By Name");
-
-
 
         ArrayList<AccountInfo> accountInfos = createArray();
 
@@ -75,7 +72,7 @@ public class ViewAccount extends AppCompatActivity {
                 i.putExtra("sex",editAccount.getSex());
                 i.putExtra("dateOfBirth",editAccount.getDateOfBirth());
                 i.putExtra("dateHired",editAccount.getDateHired());
-                i.putExtra("score",editAccount.getScore());
+                i.putExtra("score",String.valueOf(editAccount.getScore()));
                 startActivity(i);
             }
         });
@@ -96,5 +93,4 @@ public class ViewAccount extends AppCompatActivity {
         ArrayList<AccountInfo> accounts = db.fetchAccount();
         return accounts;
     }
-
 }

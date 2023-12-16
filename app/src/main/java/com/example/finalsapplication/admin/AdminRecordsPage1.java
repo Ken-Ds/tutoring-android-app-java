@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.finalsapplication.R;
 
+import java.util.Objects;
+
 public class AdminRecordsPage1 extends AppCompatActivity {
     private TextView summativeScore;
     private TextView summativeRemarks;
@@ -31,9 +33,9 @@ public class AdminRecordsPage1 extends AppCompatActivity {
         back();
 
         Intent intent = getIntent();
-        int score = Integer.parseInt(intent.getStringExtra("score"));
-        int sumTotal = 0;
-        int sumScore = 0;
+        int score = Integer.parseInt(Objects.requireNonNull(intent.getStringExtra("score")));
+        int sumTotal = 5;
+        int sumScore = score;
         boolean summativePassed;
 
         summativeScore.setText(displayScoreAndTotal(sumScore,sumTotal));

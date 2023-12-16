@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.finalsapplication.R;
 
+import java.util.Objects;
+
 public class ProfileInfoAdmin extends AppCompatActivity {
 
     private TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
@@ -42,7 +44,8 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         String sex = intent.getStringExtra("sex");
         String dateOfBirth = intent.getStringExtra("dateOfBirth");
         String dateHired = intent.getStringExtra("dateHired");
-        int score = Integer.parseInt(intent.getStringExtra("score"));
+        String scoreTxt = intent.getStringExtra("score");
+        int score = Integer.parseInt(scoreTxt);
 
         if ("F".equals(sex)) {
             pfp.setImageResource(R.drawable.female_icon);
@@ -81,7 +84,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             public void onClick(View v) {
                 // Define the intent to navigate to the View Records page
                 Intent intent = new Intent(ProfileInfoAdmin.this, AdminRecordsPage1.class);
-                intent.putExtra("score",score);
+                intent.putExtra("score",String.valueOf(score));
 
                 // Start the View Records activity
                 startActivity(intent);
