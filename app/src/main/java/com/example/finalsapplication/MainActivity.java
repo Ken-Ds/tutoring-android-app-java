@@ -46,29 +46,33 @@ public class MainActivity extends AppCompatActivity {
         });
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 emailInput = editTextCompanyEmail.getText().toString();
                 String passwordInput = editTextCompanyPassword.getText().toString();
 
                 if (emailInput.isEmpty() || passwordInput.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Incomplete Log In Information", Toast.LENGTH_SHORT).show();
                 } else {
-                    Boolean checkPassword = db.checkLoginCredentials(emailInput, passwordInput);
-                    if (checkPassword) {
-                        Toast.makeText(MainActivity.this, "Log In Successful", Toast.LENGTH_SHORT).show();
-                        if (emailInput.equals("admin@emicode.com")) {
-                            Intent toAdmin = new Intent (MainActivity.this, AdminMenu.class);
-                            startActivity(toAdmin);
-                        } else {
+                    // Check admin credentials
+                    if (emailInput.equals("admin@emicode.com") && passwordInput.equals("12345")) {
+                        Toast.makeText(MainActivity.this, "Admin Log In Successful", Toast.LENGTH_SHORT).show();
+                        Intent toAdmin = new Intent(MainActivity.this, AdminMenu.class);
+                        startActivity(toAdmin);
+                    } else {
+                        // Perform database check for regular users
+                        Boolean checkPassword = db.checkLoginCredentials(emailInput, passwordInput);
+                        if (checkPassword) {
+                            Toast.makeText(MainActivity.this, "Log In Successful", Toast.LENGTH_SHORT).show();
                             storeAuthToken(emailInput);
                             Intent toUser = new Intent(MainActivity.this, UserMenu.class);
                             startActivity(toUser);
+                        } else {
+                            Toast.makeText(MainActivity.this, "Log In Unsuccessful", Toast.LENGTH_SHORT).show();
                         }
-                    } else
-                        Toast.makeText(MainActivity.this, "Log In Unsuccessful", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
+
     }
 
     private void storeAuthToken(String authToken) {

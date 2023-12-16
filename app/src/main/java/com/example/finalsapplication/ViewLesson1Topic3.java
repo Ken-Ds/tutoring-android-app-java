@@ -80,6 +80,11 @@ public class ViewLesson1Topic3 extends AppCompatActivity {
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
+                } else if (itemId == R.id.jumpToTest){
+                    i = new Intent(ViewLesson1Topic3.this, UserTestPage.class);
+                    startActivity(i);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
                 }
 
                 return false;
@@ -97,7 +102,7 @@ public class ViewLesson1Topic3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ViewLesson1Topic3.this, ProfileInfoUser.class);
+                Intent i = new Intent(ViewLesson1Topic3.this, UserTestPage.class);
                 startActivity(i);
             }
         });

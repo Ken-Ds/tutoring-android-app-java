@@ -81,6 +81,11 @@ public class ViewLesson1Topic2 extends AppCompatActivity {
                     startActivity(i);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
+                }  else if (itemId == R.id.jumpToTest){
+                    i = new Intent(ViewLesson1Topic2.this, UserTestPage.class);
+                    startActivity(i);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
                 }
 
                 return false;
