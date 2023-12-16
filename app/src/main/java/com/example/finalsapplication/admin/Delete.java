@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class Delete extends AppCompatActivity {
     private ImageButton deleteButton;
 
     private TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
+    private ImageView pfp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class Delete extends AppCompatActivity {
         sexTV = findViewById(R.id.user_sex);
         birthTV = findViewById(R.id.date_of_birth);
         hiredTV = findViewById(R.id.date_hired);
+        pfp = findViewById(R.id.profile_pic);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
@@ -49,6 +52,12 @@ public class Delete extends AppCompatActivity {
         String sex = intent.getStringExtra("sex");
         String dateOfBirth = intent.getStringExtra("dateOfBirth");
         String dateHired = intent.getStringExtra("dateHired");
+
+        if ("F".equals(sex)){
+            pfp.setImageResource(R.drawable.female_icon);
+        } else {
+            pfp.setImageResource(R.drawable.male_icon);
+        }
 
         nameTV.setText("Name: " + name);
         emailTV.setText("User Email: " + email);

@@ -24,6 +24,13 @@
                 android:orientation="vertical"
                 android:layout_marginTop="50dp">
 
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/female_icon"
+                    />
+
                 <TextView
                     android:id="@+id/user_name"
                     android:layout_width="match_parent"
