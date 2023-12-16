@@ -19,7 +19,6 @@ public class SubmissionPageSuccess1 extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to UserMenu.class
                 startActivity(new Intent(SubmissionPageSuccess1.this, UserMenu.class));
                 finish();
             }
@@ -29,7 +28,6 @@ public class SubmissionPageSuccess1 extends AppCompatActivity {
         recordsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to RecordsPage1.class
                 startActivity(new Intent(SubmissionPageSuccess1.this, RecordsPage1.class));
             }
         });
