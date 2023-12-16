@@ -22,13 +22,6 @@ import com.example.finalsapplication.dataType.DatabaseHelper;
 
 public class ProfileInfoAdmin extends AppCompatActivity {
 
-    private ProgressBar progressBarLesson1;
-    private ProgressBar progressBarLesson2;
-    private ProgressBar progressBarLesson3;
-    private ScrollView scrollViewLessons1;
-    private ScrollView scrollViewLessons2;
-    private ScrollView scrollViewLessons3;
-
     private TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
     private ImageView pfp;
 
@@ -99,56 +92,6 @@ public class ProfileInfoAdmin extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        // Find the progress bars in the layout by their IDs
-        progressBarLesson1 = findViewById(R.id.progressBar_lesson1);
-        progressBarLesson2 = findViewById(R.id.progressBar_lesson2);
-        progressBarLesson3 = findViewById(R.id.progressBar_lesson3);
-
-        View layout1 = getLayoutInflater().inflate(R.layout.view_lesson1_topic1, null);
-        scrollViewLessons1 = layout1.findViewById(R.id.scrollViewT1);
-
-        View layout2 = getLayoutInflater().inflate(R.layout.view_lesson1_topic2, null);
-        scrollViewLessons2 = layout2.findViewById(R.id.LessonView2ScrollView);
-
-        View layout3 = getLayoutInflater().inflate(R.layout.view_lesson1_topic3, null);
-        scrollViewLessons3 = layout3.findViewById(R.id.LessonView3ScrollView);
-
-        // Set OnScrollChangeListeners for the ScrollViews
-        scrollViewLessons1.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
-            @Override
-            public void onScrollChanged() {
-                // Update progress based on scroll position for ProgressBar1
-                updateProgress(progressBarLesson1, scrollViewLessons1);
-            }
-        });
-
-        scrollViewLessons2.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
-            @Override
-            public void onScrollChanged() {
-                // Update progress based on scroll position for ProgressBar2
-                updateProgress(progressBarLesson2, scrollViewLessons2);
-            }
-        });
-
-        scrollViewLessons3.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
-            @Override
-            public void onScrollChanged() {
-                // Update progress based on scroll position for ProgressBar3
-                updateProgress(progressBarLesson3, scrollViewLessons3);
-            }
-        });
-    }
-
-    // Method to update progress based on scroll position
-    private void updateProgress(ProgressBar progressBar, ScrollView scrollView) {
-        // Calculate progress based on your scroll position and the ScrollView's content height
-        int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
-        int scrollY = scrollView.getScrollY();
-        int progress = (int) ((float) scrollY / maxScroll * 100);
-
-        // Update progress bars
-        progressBar.setProgress(progress);
     }
 
 }

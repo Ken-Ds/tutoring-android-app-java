@@ -20,13 +20,6 @@ import com.example.finalsapplication.dataType.DatabaseHelper;
 
 public class ProfileInfoUser extends AppCompatActivity {
 
-    private ProgressBar progressBarLesson1;
-    private ProgressBar progressBarLesson2;
-    private ProgressBar progressBarLesson3;
-    private ScrollView scrollViewLessons1;
-    private ScrollView scrollViewLessons2;
-    private ScrollView scrollViewLessons3;
-
     private static final String AUTH_TOKEN_KEY = "auth_token";
     private DatabaseHelper db;
     private TextView nameTV, emailTV, idTV, sexTV, birthTV, hiredTV;
@@ -95,39 +88,6 @@ public class ProfileInfoUser extends AppCompatActivity {
             }
         });
 
-        // Find the progress bars in the layout by their IDs
-        progressBarLesson1 = findViewById(R.id.progressBar_lesson1);
-        progressBarLesson2 = findViewById(R.id.progressBar_lesson2);
-        progressBarLesson3 = findViewById(R.id.progressBar_lesson3);
-
-        View layout1 = getLayoutInflater().inflate(R.layout.view_lesson1_topic1, null);
-        scrollViewLessons1 = layout1.findViewById(R.id.scrollViewT1);
-
-        View layout2 = getLayoutInflater().inflate(R.layout.view_lesson1_topic2, null);
-        scrollViewLessons2 = layout2.findViewById(R.id.LessonView2ScrollView);
-
-        View layout3 = getLayoutInflater().inflate(R.layout.view_lesson1_topic3, null);
-        scrollViewLessons3 = layout3.findViewById(R.id.LessonView3ScrollView);
-
-        setScrollChangeListener(scrollViewLessons1, progressBarLesson1);
-        setScrollChangeListener(scrollViewLessons2, progressBarLesson2);
-        setScrollChangeListener(scrollViewLessons3, progressBarLesson3);
-
-    }
-
-    private void setScrollChangeListener(ScrollView scrollView, ProgressBar progressBar) {
-        scrollView.getViewTreeObserver().addOnScrollChangedListener(() -> {
-            int maxScroll = scrollView.getChildAt(0).getHeight() - scrollView.getHeight();
-            int scrollY = scrollView.getScrollY();
-            int progress = 0;
-
-            if (maxScroll > 0) {
-                progress = (int) ((float) scrollY / maxScroll * 100);
-            }
-
-            // Update progress bar
-            progressBar.setProgress(progress);
-        });
     }
 
     private String retrieveAuthToken() {
