@@ -164,6 +164,7 @@
             android:layout_marginBottom="20dp"
             android:background="?android:attr/selectableItemBackground"
             android:scaleType="fitCenter"
-            android:src="@drawable/arrowleft" />
+            android:src="@drawable/arrowleft" 
+            android:contentDescription="Back to the user management page."/>
     </LinearLayout>
 </RelativeLayout>
