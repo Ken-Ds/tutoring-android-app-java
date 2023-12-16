@@ -2,8 +2,10 @@ package com.example.finalsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class SubmissionPageSuccess1 extends AppCompatActivity {
@@ -17,7 +19,18 @@ public class SubmissionPageSuccess1 extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Navigate to UserMenu.class
+                startActivity(new Intent(SubmissionPageSuccess1.this, UserMenu.class));
                 finish();
+            }
+        });
+
+        Button recordsButton = findViewById(R.id.buttonRecords);
+        recordsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to RecordsPage1.class
+                startActivity(new Intent(SubmissionPageSuccess1.this, RecordsPage1.class));
             }
         });
     }

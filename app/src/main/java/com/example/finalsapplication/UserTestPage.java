@@ -63,32 +63,28 @@ public class UserTestPage extends AppCompatActivity {
     }
 
     private void showQuestions() {
+        if (currentQuestionIndex < questions.size()) {
+            QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
+            TextView questionTextView = findViewById(R.id.textViewQ1);
+            questionTextView.setText(currentQuestion.getQuestionText());
 
+            RadioButton choiceARadioButton = findViewById(R.id.radioButtonA1);
+            RadioButton choiceBRadioButton = findViewById(R.id.radioButtonB1);
+            RadioButton choiceCRadioButton = findViewById(R.id.radioButtonC1);
 
-        QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
-
-        TextView questionTextView = findViewById(R.id.textViewQ1);
-        questionTextView.setText(currentQuestion.getQuestionText());
-
-        RadioButton choiceARadioButton = findViewById(R.id.radioButtonA1);
-        choiceARadioButton.setText(currentQuestion.getChoiceA());
-
-        RadioButton choiceBRadioButton = findViewById(R.id.radioButtonB1);
-        choiceBRadioButton.setText(currentQuestion.getChoiceB());
-
-        RadioButton choiceCRadioButton = findViewById(R.id.radioButtonC1);
-        choiceCRadioButton.setText(currentQuestion.getChoiceC());
-
-
+            choiceARadioButton.setText(currentQuestion.getChoiceA());
+            choiceBRadioButton.setText(currentQuestion.getChoiceB());
+            choiceCRadioButton.setText(currentQuestion.getChoiceC());
+        }
     }
-
     private void checkAnswer() {
         RadioGroup radioGroup = findViewById(R.id.radio_group1);
         int selectedId = radioGroup.getCheckedRadioButtonId();
-        RadioButton selectedRadioButton = findViewById(selectedId);
 
-        if (selectedRadioButton != null) {
+        if (selectedId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedId);
             String selectedAnswer = selectedRadioButton.getText().toString();
+
             QuestionDetails currentQuestion = questions.get(currentQuestionIndex);
 
             if (selectedAnswer.equals(currentQuestion.getCorrectAnswer())) {
@@ -99,6 +95,7 @@ public class UserTestPage extends AppCompatActivity {
 
             if (currentQuestionIndex < questions.size()) {
                 showQuestions();
+
             } else {
                 displayScore();
             }
