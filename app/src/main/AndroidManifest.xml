@@ -52,7 +52,7 @@
             android:name=".admin.ViewAccount"
             android:exported="false" />
         <activity
-            android:name=".AdminRecordsPage1"
+            android:name=".admin.AdminRecordsPage1"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

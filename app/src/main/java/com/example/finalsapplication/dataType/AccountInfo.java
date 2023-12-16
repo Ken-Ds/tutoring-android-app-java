@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 public class AccountInfo {
 
     private String name, sex, dateOfBirth, dateHired, password, email;
-    private  int id;
+    private  int id,score;
 
 
     public AccountInfo() {
@@ -16,7 +16,9 @@ public class AccountInfo {
         this.sex = sex;
         this.dateOfBirth = dateOfBirth;
         this.dateHired = dateHired;
+        this.score = score;
     }
+
 
     public AccountInfo(int id, String email, String password, String name, String sex, String dateOfBirth, String dateHired) {
         this.id = id;
@@ -26,6 +28,17 @@ public class AccountInfo {
         this.sex = sex;
         this.dateOfBirth = dateOfBirth;
         this.dateHired = dateHired;
+    }
+
+    public AccountInfo(int id, String email, String password, String name, String sex, String dateOfBirth, String dateHired, int score) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.sex = sex;
+        this.dateOfBirth = dateOfBirth;
+        this.dateHired = dateHired;
+        this.score = score;
     }
     public String getName() {
         return name;
@@ -40,6 +53,14 @@ public class AccountInfo {
     }
 
     public void setSex(String sex) { this.sex = sex;}
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 
     public String getDateOfBirth() {
         return dateOfBirth;

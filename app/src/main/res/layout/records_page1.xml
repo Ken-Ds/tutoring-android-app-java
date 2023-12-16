@@ -50,70 +50,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="655dp">
 
-                <TextView
-                    android:id="@+id/l2Label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
-                    app:layout_constraintHorizontal_bias="0.49"
-                    app:layout_constraintStart_toStartOf="@+id/linearLayout7"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
-
-                <TextView
-                    android:id="@+id/l3Label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
-                    app:layout_constraintHorizontal_bias="0.49"
-                    app:layout_constraintStart_toStartOf="@+id/linearLayout7"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
-
-                <TextView
-                    android:id="@+id/l3Score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout9"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-                    app:layout_constraintVertical_bias="0.494" />
-
-                <TextView
-                    android:id="@+id/l3Remarks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="None"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout9"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-                    app:layout_constraintVertical_bias="0.483" />
-
-                <TextView
-                    android:id="@+id/sumLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Summative"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
-                    app:layout_constraintHorizontal_bias="0.49"
-                    app:layout_constraintStart_toStartOf="@+id/linearLayout7"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
-
                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
@@ -130,29 +66,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/white"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"></LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="5dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="250dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
                     android:background="@color/white"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -161,26 +81,22 @@
                 <LinearLayout
                     android:id="@+id/linearLayout4"
                     android:layout_width="5dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="250dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="15dp"
                     android:background="@color/white"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/linearLayout5"
                     android:layout_width="5dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="250dp"
                     android:layout_marginStart="130dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
                     android:background="@color/white"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                     app:layout_constraintStart_toStartOf="@+id/linearLayout3"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -189,13 +105,11 @@
                 <LinearLayout
                     android:id="@+id/linearLayout9"
                     android:layout_width="5dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="250dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="130dp"
-                    android:layout_marginBottom="15dp"
                     android:background="@color/white"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                     app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -232,27 +146,11 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/linearLayout8"
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@color/white"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.517"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
-
-                </LinearLayout>
-
                 <TextView
                     android:id="@+id/lessonLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lessons"
+                    android:text="Title"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
@@ -263,10 +161,10 @@
                 <TextView
                     android:id="@+id/l1Label"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1"
+                    android:layout_height="23dp"
+                    android:text="Summative Test"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
                     app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
                     app:layout_constraintHorizontal_bias="0.49"
@@ -286,7 +184,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
                 <TextView
-                    android:id="@+id/l1Score"
+                    android:id="@+id/summativeScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -296,30 +194,6 @@
                     app:layout_constraintHorizontal_bias="0.547"
                     app:layout_constraintStart_toEndOf="@+id/linearLayout5"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
-
-                <TextView
-                    android:id="@+id/l2Score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout9"
-                    app:layout_constraintHorizontal_bias="0.49"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
-
-                <TextView
-                    android:id="@+id/sumScore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout9"
-                    app:layout_constraintHorizontal_bias="0.49"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
 
                 <TextView
                     android:id="@+id/remarkLabel"
@@ -335,7 +209,7 @@
                     app:layout_constraintVertical_bias="0.494" />
 
                 <TextView
-                    android:id="@+id/l1Remarks"
+                    android:id="@+id/summativeRemarks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="None"
@@ -346,45 +220,6 @@
                     app:layout_constraintHorizontal_bias="0.509"
                     app:layout_constraintStart_toEndOf="@+id/linearLayout9"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
-
-                <TextView
-                    android:id="@+id/l2Remarks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="None"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
-                    app:layout_constraintHorizontal_bias="0.509"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout9"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
-
-                <TextView
-                    android:id="@+id/sumRemarks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="None"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                    app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
-                    app:layout_constraintHorizontal_bias="0.509"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout9"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
-
-                <LinearLayout
-                    android:id="@+id/linearLayout10"
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@color/white"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout8"></LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

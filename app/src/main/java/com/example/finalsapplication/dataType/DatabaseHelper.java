@@ -22,13 +22,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ACCOUNT_DATEOFBIRTH = "ACCOUNT_DATEOFBIRTH";
     public static final String COLUMN_ACCOUNT_DATEHIRED = "ACCOUNT_DATEHIRED";
 
+    public static final String COLUMN_ACCOUNT_SCORE = "ACCOUNT_SCORE";
+
     public DatabaseHelper(@Nullable Context context) {
         super(context, "account.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + ACCOUNT_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ACCOUNT_ID + " INT, " + COLUMN_ACCOUNT_EMAIL + " TEXT, " + COLUMN_ACCOUNT_PASSWORD + " TEXT, " + COLUMN_ACCOUNT_NAME + " TEXT, " + COLUMN_ACCOUNT_SEX + " TEXT, " + COLUMN_ACCOUNT_DATEOFBIRTH + " TEXT, " + COLUMN_ACCOUNT_DATEHIRED  +  " TEXT)";
+        String createTableStatement = "CREATE TABLE " + ACCOUNT_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_ACCOUNT_ID + " INT, " + COLUMN_ACCOUNT_EMAIL + " TEXT, " + COLUMN_ACCOUNT_PASSWORD + " TEXT, " + COLUMN_ACCOUNT_NAME + " TEXT, " + COLUMN_ACCOUNT_SEX + " TEXT, " + COLUMN_ACCOUNT_DATEOFBIRTH + " TEXT, " + COLUMN_ACCOUNT_DATEHIRED  +  " TEXT, " + COLUMN_ACCOUNT_SCORE + " INT)";
 
         db.execSQL(createTableStatement);
 
@@ -53,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_ACCOUNT_SEX,accountInfo.getSex());
         cv.put(COLUMN_ACCOUNT_DATEOFBIRTH,accountInfo.getDateOfBirth());
         cv.put(COLUMN_ACCOUNT_DATEHIRED,accountInfo.getDateHired());
+        cv.put(COLUMN_ACCOUNT_SCORE,accountInfo.getScore());
 
         long insert = db.insert(ACCOUNT_TABLE, null, cv);
         if (insert == -1){
@@ -116,7 +119,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             account.setSex(cursor.getString(3));
             account.setDateOfBirth(cursor.getString(4));
             account.setDateHired(cursor.getString(5));
-
+            account.setScore(6);
             accountInfos.add(account);
         }
 
@@ -147,5 +150,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         public void deleteAccount(int iD){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(ACCOUNT_TABLE, " ACCOUNT_ID = ? ",new String[]{String.valueOf(iD)});
+    }
+
+    public void updateScore(String originalName, int score){
+        AccountInfo accountUpdate = new AccountInfo();
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_ACCOUNT_SCORE,score);
+
+        db.update(ACCOUNT_TABLE, cv," ACCOUNT_NAME = ? ", new String[]{originalName});
     }
 }

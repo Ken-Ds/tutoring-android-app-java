@@ -75,6 +75,7 @@ public class ViewAccount extends AppCompatActivity {
                 i.putExtra("sex",editAccount.getSex());
                 i.putExtra("dateOfBirth",editAccount.getDateOfBirth());
                 i.putExtra("dateHired",editAccount.getDateHired());
+                i.putExtra("score",editAccount.getScore());
                 startActivity(i);
             }
         });

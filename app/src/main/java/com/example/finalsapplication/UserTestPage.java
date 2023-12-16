@@ -3,7 +3,9 @@ package com.example.finalsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -11,6 +13,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.finalsapplication.dataType.AccountInfo;
+import com.example.finalsapplication.dataType.DatabaseHelper;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,6 +26,8 @@ public class UserTestPage extends AppCompatActivity {
     private int currentQuestionIndex = 0;
     private int score = 0;
     private int attempts = 0;
+
+    private static final String AUTH_TOKEN_KEY = "auth_token";
 
 
     @Override
@@ -46,6 +54,8 @@ public class UserTestPage extends AppCompatActivity {
                 navigateToLessonPage();
             }
         });
+
+        Log.d("Score",""+score);
     }
 
     private List<QuestionDetails> generateQuestions() {
@@ -171,5 +181,20 @@ public class UserTestPage extends AppCompatActivity {
         public String getCorrectAnswer() {
             return correctAnswer;
         }
+    }
+
+    private String retrieveAuthToken() {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        return sharedPreferences.getString(AUTH_TOKEN_KEY, null);
+    }
+
+    public void saveScore(){
+        DatabaseHelper db = new DatabaseHelper(UserTestPage.this);
+        String emailCheck = retrieveAuthToken();
+        AccountInfo accDetails = db.getUserByEmail(emailCheck);
+
+        String name = accDetails.getName();
+
+        db.updateScore(name,score);
     }
 }

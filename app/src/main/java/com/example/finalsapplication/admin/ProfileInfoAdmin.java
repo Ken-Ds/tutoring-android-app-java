@@ -1,24 +1,16 @@
 package com.example.finalsapplication.admin;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.finalsapplication.AdminRecordsPage1;
 import com.example.finalsapplication.R;
-import com.example.finalsapplication.dataType.AccountInfo;
-import com.example.finalsapplication.dataType.DatabaseHelper;
 
 public class ProfileInfoAdmin extends AppCompatActivity {
 
@@ -42,6 +34,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         hiredTV = findViewById(R.id.date_hired);
         pfp = findViewById(R.id.profile_pic);
 
+
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String email = intent.getStringExtra("email");
@@ -49,6 +42,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
         String sex = intent.getStringExtra("sex");
         String dateOfBirth = intent.getStringExtra("dateOfBirth");
         String dateHired = intent.getStringExtra("dateHired");
+        int score = Integer.parseInt(intent.getStringExtra("score"));
 
         if ("F".equals(sex)) {
             pfp.setImageResource(R.drawable.female_icon);
@@ -87,6 +81,7 @@ public class ProfileInfoAdmin extends AppCompatActivity {
             public void onClick(View v) {
                 // Define the intent to navigate to the View Records page
                 Intent intent = new Intent(ProfileInfoAdmin.this, AdminRecordsPage1.class);
+                intent.putExtra("score",score);
 
                 // Start the View Records activity
                 startActivity(intent);

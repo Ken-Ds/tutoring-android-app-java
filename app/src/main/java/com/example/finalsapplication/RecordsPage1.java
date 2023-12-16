@@ -2,6 +2,7 @@ package com.example.finalsapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,44 +11,41 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.finalsapplication.dataType.AccountInfo;
+import com.example.finalsapplication.dataType.DatabaseHelper;
+
 public class RecordsPage1 extends AppCompatActivity {
-    private TextView lesson1Score, lesson2Score, lesson3Score, summativeScore;
-    private TextView lesson1Remarks, lesson2Remarks, lesson3Remarks, summativeRemarks;
+    private TextView summativeScore;
+    private TextView summativeRemarks;
+
+    private static final String AUTH_TOKEN_KEY = "auth_token";
 
     private ImageButton back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.records_page1);
 
-        lesson1Score = (TextView) findViewById(R.id.l1Score);
-        lesson2Score = (TextView) findViewById(R.id.l2Score);
-        lesson3Score = (TextView) findViewById(R.id.l3Score);
-        summativeScore = (TextView) findViewById(R.id.sumScore);
 
-        lesson1Remarks = (TextView) findViewById(R.id.l1Remarks);
-        lesson2Remarks = (TextView) findViewById(R.id.l2Remarks);
-        lesson3Remarks = (TextView) findViewById(R.id.l3Remarks);
-        summativeRemarks = (TextView) findViewById(R.id.sumRemarks);
+        DatabaseHelper db = new DatabaseHelper(RecordsPage1.this);
+
+        String emailCheck = retrieveAuthToken();
+        AccountInfo accDetails = db.getUserByEmail(emailCheck);
+
+        int score = accDetails.getScore();
+
+        summativeScore = (TextView) findViewById(R.id.summativeScore);
+
+        summativeRemarks = (TextView) findViewById(R.id.summativeRemarks);
 
         back = (ImageButton) findViewById(R.id.backButton);
         back();
 
-        int total1 = 0,total2 = 0,total3 = 0,sumTotal = 0;
-        int score1 = 0,score2 = 0,score3 = 0,sumScore = 0;
-        boolean lesson1Passed,lesson2Passed, lesson3Passed, summativePassed;
+        int sumTotal = 5;
+        int sumScore = score;
+        boolean summativePassed;
 
-        lesson1Score.setText(displayScoreAndTotal(score1,total1));
-        lesson1Passed = isPassed(score1, total1);
-        lesson1Remarks.setText(displayRemarks(lesson1Passed));
-
-        lesson2Score.setText(displayScoreAndTotal(score2,total2));
-        lesson2Passed = isPassed(score2, total2);
-        lesson2Remarks.setText(displayRemarks(lesson2Passed));
-
-        lesson3Score.setText(displayScoreAndTotal(score3,total3));
-        lesson3Passed = isPassed(score3, total3);
-        lesson3Remarks.setText(displayRemarks(lesson3Passed));
 
         summativeScore.setText(displayScoreAndTotal(sumScore,sumTotal));
         summativePassed = isPassed(sumScore,sumTotal);
@@ -81,5 +79,10 @@ public class RecordsPage1 extends AppCompatActivity {
             return "Passed";
         else
             return "Failed";
+    }
+
+    private String retrieveAuthToken() {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        return sharedPreferences.getString(AUTH_TOKEN_KEY, null);
     }
 }

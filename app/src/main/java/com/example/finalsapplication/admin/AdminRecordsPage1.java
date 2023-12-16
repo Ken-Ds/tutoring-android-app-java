@@ -1,4 +1,4 @@
-package com.example.finalsapplication;
+package com.example.finalsapplication.admin;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,11 +9,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.finalsapplication.admin.AdminMenu;
+import com.example.finalsapplication.R;
 
 public class AdminRecordsPage1 extends AppCompatActivity {
-    private TextView lesson1Score, lesson2Score, lesson3Score, summativeScore;
-    private TextView lesson1Remarks, lesson2Remarks, lesson3Remarks, summativeRemarks;
+    private TextView summativeScore;
+    private TextView summativeRemarks;
 
     private ImageButton backButton;
     @SuppressLint("MissingInflatedId")
@@ -22,35 +22,19 @@ public class AdminRecordsPage1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_records_page1);
 
-        lesson1Score = (TextView) findViewById(R.id.l1Score);
-        lesson2Score = (TextView) findViewById(R.id.l2Score);
-        lesson3Score = (TextView) findViewById(R.id.l3Score);
-        summativeScore = (TextView) findViewById(R.id.sumScore);
+        summativeScore = (TextView) findViewById(R.id.summativeScore);
 
-        lesson1Remarks = (TextView) findViewById(R.id.l1Remarks);
-        lesson2Remarks = (TextView) findViewById(R.id.l2Remarks);
-        lesson3Remarks = (TextView) findViewById(R.id.l3Remarks);
-        summativeRemarks = (TextView) findViewById(R.id.sumRemarks);
+        summativeRemarks = (TextView) findViewById(R.id.summativeRemarks);
 
         backButton = (ImageButton) findViewById(R.id.backButton);
 
         back();
 
-        int total1 = 0,total2 = 0,total3 = 0,sumTotal = 0;
-        int score1 = 0,score2 = 0,score3 = 0,sumScore = 0;
-        boolean lesson1Passed,lesson2Passed, lesson3Passed, summativePassed;
-
-        lesson1Score.setText(displayScoreAndTotal(score1,total1));
-        lesson1Passed = isPassed(score1, total1);
-        lesson1Remarks.setText(displayRemarks(lesson1Passed));
-
-        lesson2Score.setText(displayScoreAndTotal(score2,total2));
-        lesson2Passed = isPassed(score2, total2);
-        lesson2Remarks.setText(displayRemarks(lesson2Passed));
-
-        lesson3Score.setText(displayScoreAndTotal(score3,total3));
-        lesson3Passed = isPassed(score3, total3);
-        lesson3Remarks.setText(displayRemarks(lesson3Passed));
+        Intent intent = getIntent();
+        int score = Integer.parseInt(intent.getStringExtra("score"));
+        int sumTotal = 0;
+        int sumScore = 0;
+        boolean summativePassed;
 
         summativeScore.setText(displayScoreAndTotal(sumScore,sumTotal));
         summativePassed = isPassed(sumScore,sumTotal);
